@@ -1,0 +1,187 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="company.master.cs" Inherits="SkillBridge.company.company" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <!-- CSS Stylesheets -->
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+                <link href="../css/style.css" rel="stylesheet">
+                <link href="../css/dashboard.css" rel="stylesheet">
+                <link href="../css/tables.css" rel="stylesheet">
+                <link href="../css/responsive.css" rel="stylesheet">
+                <!-- Loader wrapper -->
+                <div id="loader-wrapper">
+                    <div class="loader"></div>
+                </div>
+
+                <div class="dashboard-wrapper">
+
+                    <!-- Company Sidebar Layout -->
+                    <aside class="sidebar">
+                        <div class="sidebar-header">
+                            <a class="sidebar-brand" href="index.html">
+                                <i class="fa-solid fa-graduation-cap text-accent"></i>
+                                <span>Skill</span>Bridge
+                            </a>
+                        </div>
+
+                        <div class="sidebar-nav">
+                            <div class="nav-item-title">Employer Module</div>
+                            <a href="company-dashboard.html" class="sidebar-link active">
+                                <i class="fa-solid fa-chart-line"></i>Dashboard
+                            </a>
+                            <a href="company-profile.html" class="sidebar-link">
+                                <i class="fa-solid fa-building-user"></i>Company Profile
+                            </a>
+                            <a href="internship-management.html" class="sidebar-link">
+                                <i class="fa-solid fa-tasks"></i>Manage Internships
+                            </a>
+                            <a href="add-internship.html" class="sidebar-link">
+                                <i class="fa-solid fa-circle-plus"></i>Post Internship
+                            </a>
+                            <a href="applicants.html" class="sidebar-link">
+                                <i class="fa-solid fa-user-group"></i>Applicants
+                            </a>
+
+                            <div class="nav-item-title">Session</div>
+                            <a href="index.html" class="sidebar-link text-danger" onclick="alert('You have logged out successfully.')">
+                                <i class="fa-solid fa-right-from-bracket"></i>Log Out
+                            </a>
+                        </div>
+                    </aside>
+
+                    <!-- Dashboard Content Area -->
+                    <main class="dashboard-content">
+
+                        <!-- Sticky Header -->
+                        <header class="dashboard-header">
+                            <div class="d-flex align-items-center gap-3">
+                                <button class="sidebar-toggle btn"><i class="fa-solid fa-bars"></i></button>
+                                <span class="navbar-brand-custom d-none d-md-inline-block fs-6 fw-bold">Employer Workspace</span>
+                            </div>
+
+                            <div class="header-actions">
+                                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                                    <i class="fa-solid fa-moon"></i>
+                                </button>
+                                <div class="dropdown">
+                                    <button class="action-icon-btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-regular fa-bell"></i>
+                                        <span class="notification-badge"></span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-custom p-0" style="width: 300px;">
+                                        <div class="p-3 border-bottom d-flex justify-content-between align-items-center bg-light">
+                                            <span class="fw-bold text-secondary">Employer Alerts</span>
+                                            <span class="badge bg-primary rounded-circle">1</span>
+                                        </div>
+                                        <div class="p-2">
+                                            <a class="dropdown-item dropdown-item-custom fs-8 py-2" href="applicants.html">
+                                                <div>
+                                                    <strong class="text-secondary d-block">New Application</strong>
+                                                    <span class="text-muted">Jane Doe submitted application files for Web Intern</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown">
+                                    <button class="profile-dropdown-btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div style="width: 36px; height: 36px; background-color: #E2E8F0;" class="rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="fa-solid fa-building text-muted"></i>
+                                        </div>
+                                        <span>TechSphere</span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom">
+                                        <li><a class="dropdown-item dropdown-item-custom" href="company-profile.html"><i class="fa-solid fa-building-user"></i>Company Profile</a></li>
+                                        <li><a class="dropdown-item dropdown-item-custom" href="internship-management.html"><i class="fa-solid fa-briefcase"></i>Positions</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item dropdown-item-custom text-danger" href="index.html" onclick="alert('You have logged out successfully.')"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </header>
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                <!-- Dashboard Footer -->
+                <footer class="footer-custom dashboard-footer">
+                    <div class="container">
+                        <div class="row g-4 align-items-start">
+                            <div class="col-lg-5 col-md-6">
+                                <a class="navbar-brand navbar-brand-custom footer-brand text-white mb-3" href="index.html">
+                                    <i class="fa-solid fa-graduation-cap text-accent"></i>
+                                    <span>Skill</span>Bridge
+                                </a>
+                                <p class="footer-text mb-4">
+                                    Manage internships, applications, and hiring activity from one polished workspace built for students, employers, and administrators.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" class="footer-social-btn" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <h5>Explore</h5>
+                                <a href="internship-list.html" class="footer-link">Browse Internships</a>
+                                <a href="recommendation.html" class="footer-link">Recommendations</a>
+                                <a href="my-applications.html" class="footer-link">My Applications</a>
+                                <a href="track-application.html" class="footer-link">Track Application</a>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <h5>Support</h5>
+                                <a href="contact.html" class="footer-support-link">
+                                    <span>Contact Support</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="about.html" class="footer-support-link">
+                                    <span>About SkillBridge</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="login.html" class="footer-support-link">
+                                    <span>Sign In</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="register.html" class="footer-support-link mb-0">
+                                    <span>Create Account</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer-divider"></div>
+                        <div class="footer-bottom">
+                            <p class="mb-0">&copy; 2026 SkillBridge Internship Portal. All rights reserved.</p>
+                            <div class="footer-legal-links">
+                                <a href="#" class="footer-link mb-0">Privacy Policy</a>
+                                <a href="#" class="footer-link mb-0">Terms of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../js/script.js"></script>
+        <script src="../js/dashboard.js"></script>
+        </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

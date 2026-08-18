@@ -1,0 +1,232 @@
+/* ==========================================================================
+   Internship Management Portal - Forms Stylesheet (forms.css)
+   ========================================================================== */
+
+/* Modern Form Customizations */
+.form-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.form-label-custom {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.form-control-custom {
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  background-color: #FFFFFF;
+}
+
+.form-control-custom:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  outline: none;
+}
+
+/* Custom Password Field Wrapper */
+.password-field-container {
+  position: relative;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.password-toggle-btn:hover {
+  color: var(--secondary);
+}
+
+/* Upload zones for resumes and company logos */
+.upload-drag-zone {
+  border: 2px dashed #CBD5E1;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  text-align: center;
+  background-color: #F8FAFC;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+}
+
+.upload-drag-zone:hover {
+  border-color: var(--primary);
+  background-color: rgba(37, 99, 235, 0.02);
+}
+
+.upload-drag-zone i {
+  font-size: 2rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.upload-drag-zone:hover i {
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.upload-drag-zone input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-file-info {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* Skills tagging container */
+.skills-select-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0.5rem;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.skill-tag-input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  min-width: 120px;
+  padding: 0.3rem;
+}
+
+.skill-badge-removable {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--primary);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.skill-badge-removable i {
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: var(--transition);
+}
+
+.skill-badge-removable i:hover {
+  color: var(--danger);
+}
+
+/* Registration Form Tabs (Student vs Company) */
+.form-tab-container {
+  display: flex;
+  background-color: #F1F5F9;
+  padding: 6px;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.form-tab-btn {
+  flex: 1;
+  text-align: center;
+  border: none;
+  background: none;
+  padding: 0.75rem;
+  font-weight: 600;
+  border-radius: 8px;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.form-tab-btn.active {
+  background-color: #FFFFFF;
+  color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Validation Styling Overrides */
+.form-control-custom.is-invalid {
+  border-color: var(--danger);
+  background-image: none;
+}
+
+.form-control-custom.is-invalid:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.invalid-feedback-custom {
+  color: var(--danger);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.3rem;
+  display: none;
+}
+
+.form-control-custom.is-invalid + .invalid-feedback-custom {
+  display: block;
+}
+
+/* Rounded Profile Photo Edit Frame */
+.profile-image-upload {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+}
+
+.profile-image-upload img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+}
+
+.profile-image-upload-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid #FFFFFF;
+  transition: var(--transition);
+}
+
+.profile-image-upload-btn:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.1);
+}
+
+.profile-image-upload input[type="file"] {
+  display: none;
+}
