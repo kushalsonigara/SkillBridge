@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="about.aspx" />
     <Content Include="Admin\admin-dashboard.aspx" />
     <Content Include="Admin\reports.aspx" />
     <Content Include="company\applicants.aspx" />
@@ -74,14 +76,19 @@
     <Content Include="company\add-internship.aspx" />
     <Content Include="company\company-profile.aspx" />
     <Content Include="company\internship-management.aspx" />
+    <Content Include="contact.aspx" />
     <Content Include="css\dashboard.css" />
     <Content Include="css\forms.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
     <Content Include="css\tables.css" />
+    <Content Include="index.aspx" />
+    <Content Include="internship-list.aspx" />
     <Content Include="js\dashboard.js" />
     <Content Include="js\script.js" />
     <Content Include="js\validation.js" />
+    <Content Include="login.aspx" />
+    <Content Include="register.aspx" />
     <Content Include="student\my-applications.aspx" />
     <Content Include="student\recommendation.aspx" />
     <Content Include="student\student-dashboard.aspx" />
@@ -90,6 +97,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\admin-dashboard.aspx.cs">
       <DependentUpon>admin-dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,7 +172,48 @@
     <Compile Include="company\internship-management.aspx.designer.cs">
       <DependentUpon>internship-management.aspx</DependentUpon>
     </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="internship-list.aspx.cs">
+      <DependentUpon>internship-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="internship-list.aspx.designer.cs">
+      <DependentUpon>internship-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="student\my-applications.aspx.cs">
       <DependentUpon>my-applications.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,6 +259,7 @@
   <ItemGroup>
     <Content Include="Admin\admin.Master" />
     <Content Include="company\company.Master" />
+    <Content Include="Default.Master" />
     <None Include="packages.config" />
     <Content Include="student\student.Master" />
     <None Include="Web.Debug.config">
