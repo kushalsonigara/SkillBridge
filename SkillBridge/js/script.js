@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="container">
         <div class="row g-4 align-items-start">
           <div class="col-lg-5 col-md-6">
-            <a class="navbar-brand navbar-brand-custom footer-brand text-white mb-3" href="index.html">
+            <a class="navbar-brand navbar-brand-custom footer-brand text-white mb-3" href="index.aspx">
               <i class="fa-solid fa-graduation-cap text-accent"></i>
               <span>Skill</span>Bridge
             </a>
@@ -77,26 +77,26 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
           <div class="col-lg-3 col-md-6">
             <h5>Explore</h5>
-            <a href="internship-list.html" class="footer-link">Browse Internships</a>
-            <a href="recommendation.html" class="footer-link">Recommendations</a>
-            <a href="my-applications.html" class="footer-link">My Applications</a>
-            <a href="track-application.html" class="footer-link">Track Application</a>
+            <a href="internship-list.aspx" class="footer-link">Browse Internships</a>
+            <a href="recommendation.aspx" class="footer-link">Recommendations</a>
+            <a href="my-applications.aspx" class="footer-link">My Applications</a>
+            <a href="track-application.aspx" class="footer-link">Track Application</a>
           </div>
           <div class="col-lg-4 col-md-6">
             <h5>Support</h5>
-            <a href="contact.html" class="footer-support-link">
+            <a href="contact.aspx" class="footer-support-link">
               <span>Contact Support</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
-            <a href="about.html" class="footer-support-link">
+            <a href="about.aspx" class="footer-support-link">
               <span>About SkillBridge</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
-            <a href="login.html" class="footer-support-link">
+            <a href="login.aspx" class="footer-support-link">
               <span>Sign In</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
-            <a href="register.html" class="footer-support-link mb-0">
+            <a href="register.aspx" class="footer-support-link mb-0">
               <span>Create Account</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link-custom');
     navLinks.forEach(link => {
       const linkPage = link.getAttribute('href');
-      if (linkPage === pageName || (pageName === '' && linkPage === 'index.html')) {
+      if (linkPage === pageName || (pageName === '' && (linkPage === 'index.aspx' || linkPage === 'index.html'))) {
         link.classList.add('active');
       } else {
         link.classList.remove('active');

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="company.master.cs" Inherits="SkillBridge.company.company" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="company.master.cs" Inherits="SkillBridge.company.company" %>
 
 <!DOCTYPE html>
 
@@ -29,7 +29,7 @@
                     <!-- Company Sidebar Layout -->
                     <aside class="sidebar">
                         <div class="sidebar-header">
-                            <a class="sidebar-brand" href="index.html">
+                            <a class="sidebar-brand" href="../index.aspx">
                                 <i class="fa-solid fa-graduation-cap text-accent"></i>
                                 <span>Skill</span>Bridge
                             </a>
@@ -37,24 +37,24 @@
 
                         <div class="sidebar-nav">
                             <div class="nav-item-title">Employer Module</div>
-                            <a href="company-dashboard.html" class="sidebar-link active">
+                            <a href="company-dashboard.aspx" class="sidebar-link active">
                                 <i class="fa-solid fa-chart-line"></i>Dashboard
                             </a>
-                            <a href="company-profile.html" class="sidebar-link">
+                            <a href="company-profile.aspx" class="sidebar-link">
                                 <i class="fa-solid fa-building-user"></i>Company Profile
                             </a>
-                            <a href="internship-management.html" class="sidebar-link">
+                            <a href="internship-management.aspx" class="sidebar-link">
                                 <i class="fa-solid fa-tasks"></i>Manage Internships
                             </a>
-                            <a href="add-internship.html" class="sidebar-link">
+                            <a href="add-internship.aspx" class="sidebar-link">
                                 <i class="fa-solid fa-circle-plus"></i>Post Internship
                             </a>
-                            <a href="applicants.html" class="sidebar-link">
+                            <a href="applicants.aspx" class="sidebar-link">
                                 <i class="fa-solid fa-user-group"></i>Applicants
                             </a>
 
                             <div class="nav-item-title">Session</div>
-                            <a href="index.html" class="sidebar-link text-danger" onclick="alert('You have logged out successfully.')">
+                            <a href="../index.aspx" class="sidebar-link text-danger" onclick="alert('You have logged out successfully.')">
                                 <i class="fa-solid fa-right-from-bracket"></i>Log Out
                             </a>
                         </div>
@@ -85,7 +85,7 @@
                                             <span class="badge bg-primary rounded-circle">1</span>
                                         </div>
                                         <div class="p-2">
-                                            <a class="dropdown-item dropdown-item-custom fs-8 py-2" href="applicants.html">
+                                            <a class="dropdown-item dropdown-item-custom fs-8 py-2" href="applicants.aspx">
                                                 <div>
                                                     <strong class="text-secondary d-block">New Application</strong>
                                                     <span class="text-muted">Jane Doe submitted application files for Web Intern</span>
@@ -103,12 +103,12 @@
                                         <span>TechSphere</span>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom">
-                                        <li><a class="dropdown-item dropdown-item-custom" href="company-profile.html"><i class="fa-solid fa-building-user"></i>Company Profile</a></li>
-                                        <li><a class="dropdown-item dropdown-item-custom" href="internship-management.html"><i class="fa-solid fa-briefcase"></i>Positions</a></li>
+                                        <li><a class="dropdown-item dropdown-item-custom" href="company-profile.aspx"><i class="fa-solid fa-building-user"></i>Company Profile</a></li>
+                                        <li><a class="dropdown-item dropdown-item-custom" href="internship-management.aspx"><i class="fa-solid fa-briefcase"></i>Positions</a></li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
-                                        <li><a class="dropdown-item dropdown-item-custom text-danger" href="index.html" onclick="alert('You have logged out successfully.')"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a></li>
+                                        <li><a class="dropdown-item dropdown-item-custom text-danger" href="../index.aspx" onclick="alert('You have logged out successfully.')"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@
                     <div class="container">
                         <div class="row g-4 align-items-start">
                             <div class="col-lg-5 col-md-6">
-                                <a class="navbar-brand navbar-brand-custom footer-brand text-white mb-3" href="index.html">
+                                <a class="navbar-brand navbar-brand-custom footer-brand text-white mb-3" href="../index.aspx">
                                     <i class="fa-solid fa-graduation-cap text-accent"></i>
                                     <span>Skill</span>Bridge
                                 </a>
@@ -138,26 +138,26 @@
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <h5>Explore</h5>
-                                <a href="internship-list.html" class="footer-link">Browse Internships</a>
-                                <a href="recommendation.html" class="footer-link">Recommendations</a>
-                                <a href="my-applications.html" class="footer-link">My Applications</a>
-                                <a href="track-application.html" class="footer-link">Track Application</a>
+                                <a href="../internship-list.aspx" class="footer-link">Browse Internships</a>
+                                <a href="../student/recommendation.aspx" class="footer-link">Recommendations</a>
+                                <a href="../student/my-applications.aspx" class="footer-link">My Applications</a>
+                                <a href="../student/track-application.aspx" class="footer-link">Track Application</a>
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <h5>Support</h5>
-                                <a href="contact.html" class="footer-support-link">
+                                <a href="../contact.aspx" class="footer-support-link">
                                     <span>Contact Support</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
-                                <a href="about.html" class="footer-support-link">
+                                <a href="../about.aspx" class="footer-support-link">
                                     <span>About SkillBridge</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
-                                <a href="login.html" class="footer-support-link">
+                                <a href="../login.aspx" class="footer-support-link">
                                     <span>Sign In</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
-                                <a href="register.html" class="footer-support-link mb-0">
+                                <a href="../register.aspx" class="footer-support-link mb-0">
                                     <span>Create Account</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>

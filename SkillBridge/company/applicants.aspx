@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/company/company.Master" AutoEventWireup="true" CodeBehind="applicants.aspx.cs" Inherits="SkillBridge.company.applicants" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/company/company.Master" AutoEventWireup="true" CodeBehind="applicants.aspx.cs" Inherits="SkillBridge.company.applicants" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -9,7 +9,7 @@
         <!-- Breadcrumb Navigation -->
         <nav aria-label="breadcrumb" class="breadcrumb-custom">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item breadcrumb-item-custom"><a href="company-dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item breadcrumb-item-custom"><a href="company-dashboard.aspx">Dashboard</a></li>
                 <li class="breadcrumb-item breadcrumb-item-custom active" aria-current="page">Applicants</li>
             </ol>
         </nav>

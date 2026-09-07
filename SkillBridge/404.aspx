@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="404.aspx.cs" Inherits="SkillBridge._404" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="404.aspx.cs" Inherits="SkillBridge._404" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder2">
@@ -17,13 +17,14 @@
             <h3 class="fw-bold mb-3">Page Not Found</h3>
             <p class="text-muted fs-7 mb-4">The URL path you requested was not found or is currently undergoing database updates. Please verify the link or redirect using the buttons below.</p>
             <div class="d-flex justify-content-center gap-3">
-              <a href="index.html" class="btn btn-primary px-4 py-2"><i class="fa-solid fa-house me-2"></i>Go to Home</a>
-              <a href="login.html" class="btn btn-outline-secondary px-4 py-2"><i class="fa-solid fa-right-to-bracket me-2"></i>Log In</a>
+              <a href="index.aspx" class="btn btn-primary px-4 py-2"><i class="fa-solid fa-house me-2"></i>Go to Home</a>
+              <a href="login.aspx" class="btn btn-outline-secondary px-4 py-2"><i class="fa-solid fa-right-to-bracket me-2"></i>Log In</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </section>
   </main>
 </asp:Content>
 

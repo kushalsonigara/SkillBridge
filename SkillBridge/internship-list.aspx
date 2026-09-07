@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="internship-list.aspx.cs" Inherits="SkillBridge.internship_list" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="internship-list.aspx.cs" Inherits="SkillBridge.internship_list" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -23,10 +23,10 @@
                         <div class="form-card p-4 shadow-sm position-sticky" style="top: 100px;">
                             <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
                                 <h5 class="fw-bold text-secondary mb-0"><i class="fa-solid fa-sliders text-primary me-2"></i>Filter Panel</h5>
-                                <a href="internship-list.html" class="fs-8 fw-semibold text-danger">Reset All</a>
+                                <a href="internship-list.aspx" class="fs-8 fw-semibold text-danger">Reset All</a>
                             </div>
 
-                            <form action="internship-list.html" method="GET" onsubmit="event.preventDefault(); alert('Filters applied! (Demo only)')">
+                            <form action="internship-list.aspx" method="GET" onsubmit="event.preventDefault(); alert('Filters applied! (Demo only)')">
                                 <!-- Search Keyword -->
                                 <div class="mb-3">
                                     <label class="form-label form-label-custom">Keyword Search</label>
@@ -149,112 +149,112 @@
                                     </div>
 
                                     <!-- Right: Action Buttons -->
-                                    <div class="d-flex gap-2 justify-content-end">
-                                        <a href="apply.html" class="btn btn-outline-secondary btn-sm px-3 rounded-3 fs-8 py-2">View Details</a>
-                                        <button class="btn btn-primary btn-sm px-4 rounded-3 shadow-sm fs-8 py-2" onclick="openQuickApply('Frontend Developer Intern', 'TechSphere Solutions')">Apply Now</button>
-                                    </div>
-                                </div>
-                            </div>
+                                     <div class="d-flex gap-2 justify-content-end">
+                                         <button type="button" class="btn btn-outline-secondary btn-sm px-3 rounded-3 fs-8 py-2" onclick="openQuickApply('Frontend Developer Intern', 'TechSphere Solutions')">View Details</button>
+                                         <button class="btn btn-primary btn-sm px-4 rounded-3 shadow-sm fs-8 py-2" onclick="openQuickApply('Frontend Developer Intern', 'TechSphere Solutions')">Apply Now</button>
+                                     </div>
+                                 </div>
+                             </div>
 
-                            <!-- Internship Card 2 -->
-                            <div class="card-premium p-4 job-item-card mb-4">
-                                <div class="d-flex gap-3 mb-3">
-                                    <!-- Logo -->
-                                    <div class="bg-light border rounded-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 60px; height: 60px;">
-                                        <i class="fa-solid fa-palette fa-2x text-success"></i>
-                                    </div>
+                             <!-- Internship Card 2 -->
+                             <div class="card-premium p-4 job-item-card mb-4">
+                                 <div class="d-flex gap-3 mb-3">
+                                     <!-- Logo -->
+                                     <div class="bg-light border rounded-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 60px; height: 60px;">
+                                         <i class="fa-solid fa-palette fa-2x text-success"></i>
+                                     </div>
 
-                                    <!-- Main Body -->
-                                    <div class="flex-grow-1 min-width-0">
-                                        <div class="d-flex justify-content-between align-items-start gap-2">
-                                            <h5 class="fw-bold text-secondary mb-1 text-truncate">UI/UX Designer Intern</h5>
-                                            <button class="btn-bookmark btn border-0 p-0 text-muted" aria-label="Bookmark Internship">
-                                                <i class="fa-regular fa-bookmark fs-5"></i>
-                                            </button>
-                                        </div>
+                                     <!-- Main Body -->
+                                     <div class="flex-grow-1 min-width-0">
+                                         <div class="d-flex justify-content-between align-items-start gap-2">
+                                             <h5 class="fw-bold text-secondary mb-1 text-truncate">UI/UX Designer Intern</h5>
+                                             <button class="btn-bookmark btn border-0 p-0 text-muted" aria-label="Bookmark Internship">
+                                                 <i class="fa-regular fa-bookmark fs-5"></i>
+                                             </button>
+                                         </div>
 
-                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
-                                            <span class="text-primary fw-semibold fs-7"><i class="fa-solid fa-building me-1"></i>FigmaLab Studios</span>
-                                            <span class="badge bg-light-primary text-primary px-2 py-0.5 rounded-2 fs-9"><i class="fa-solid fa-location-dot me-1 animate-icon-pin"></i>San Francisco</span>
-                                        </div>
+                                         <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
+                                             <span class="text-primary fw-semibold fs-7"><i class="fa-solid fa-building me-1"></i>FigmaLab Studios</span>
+                                             <span class="badge bg-light-primary text-primary px-2 py-0.5 rounded-2 fs-9"><i class="fa-solid fa-location-dot me-1 animate-icon-pin"></i>San Francisco</span>
+                                         </div>
 
-                                        <p class="text-muted fs-8 mb-3 leading-relaxed">Work closely with product managers to design interactive wireframes, user research reports, and test flows. You will maintain our active design systems, build interactive prototypes, and participate in design feedback sessions.</p>
+                                         <p class="text-muted fs-8 mb-3 leading-relaxed">Work closely with product managers to design interactive wireframes, user research reports, and test flows. You will maintain our active design systems, build interactive prototypes, and participate in design feedback sessions.</p>
 
-                                        <div class="d-flex flex-wrap gap-1">
-                                            <span class="badge-skill">Figma</span>
-                                            <span class="badge-skill">Wireframing</span>
-                                            <span class="badge-skill">User Research</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                         <div class="d-flex flex-wrap gap-1">
+                                             <span class="badge-skill">Figma</span>
+                                             <span class="badge-skill">Wireframing</span>
+                                             <span class="badge-skill">User Research</span>
+                                         </div>
+                                     </div>
+                                 </div>
 
-                                <!-- Divider and Footer info -->
-                                <div class="border-top pt-3 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
-                                    <!-- Left: Info Bar -->
-                                    <div class="d-flex flex-wrap gap-3 fs-8 text-muted">
-                                        <span class="d-inline-flex align-items-center"><i class="fa-solid fa-hand-holding-dollar text-success me-1.5 animate-icon-stipend"></i><strong>$1,400</strong>/mo</span>
-                                        <span class="text-light-border d-none d-sm-inline">|</span>
-                                        <span class="d-inline-flex align-items-center"><i class="fa-regular fa-clock text-success me-1.5"></i><strong>6 Months</strong></span>
-                                        <span class="text-light-border d-none d-sm-inline">|</span>
-                                        <span class="d-inline-flex align-items-center"><i class="fa-regular fa-calendar-days text-success me-1.5 animate-icon-calendar"></i>Deadline: <strong>Aug 20, 2026</strong></span>
-                                    </div>
+                                 <!-- Divider and Footer info -->
+                                 <div class="border-top pt-3 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                                     <!-- Left: Info Bar -->
+                                     <div class="d-flex flex-wrap gap-3 fs-8 text-muted">
+                                         <span class="d-inline-flex align-items-center"><i class="fa-solid fa-hand-holding-dollar text-success me-1.5 animate-icon-stipend"></i><strong>$1,400</strong>/mo</span>
+                                         <span class="text-light-border d-none d-sm-inline">|</span>
+                                         <span class="d-inline-flex align-items-center"><i class="fa-regular fa-clock text-success me-1.5"></i><strong>6 Months</strong></span>
+                                         <span class="text-light-border d-none d-sm-inline">|</span>
+                                         <span class="d-inline-flex align-items-center"><i class="fa-regular fa-calendar-days text-success me-1.5 animate-icon-calendar"></i>Deadline: <strong>Aug 20, 2026</strong></span>
+                                     </div>
 
-                                    <!-- Right: Action Buttons -->
-                                    <div class="d-flex gap-2 justify-content-end">
-                                        <a href="apply.html" class="btn btn-outline-secondary btn-sm px-3 rounded-3 fs-8 py-2">View Details</a>
-                                        <button class="btn btn-primary btn-sm px-4 rounded-3 shadow-sm fs-8 py-2" onclick="openQuickApply('UI/UX Designer Intern', 'FigmaLab Studios')">Apply Now</button>
-                                    </div>
-                                </div>
-                            </div>
+                                     <!-- Right: Action Buttons -->
+                                     <div class="d-flex gap-2 justify-content-end">
+                                         <button type="button" class="btn btn-outline-secondary btn-sm px-3 rounded-3 fs-8 py-2" onclick="openQuickApply('UI/UX Designer Intern', 'FigmaLab Studios')">View Details</button>
+                                         <button class="btn btn-primary btn-sm px-4 rounded-3 shadow-sm fs-8 py-2" onclick="openQuickApply('UI/UX Designer Intern', 'FigmaLab Studios')">Apply Now</button>
+                                     </div>
+                                 </div>
+                             </div>
 
-                            <!-- Internship Card 3 -->
-                            <div class="card-premium p-4 job-item-card mb-4">
-                                <div class="d-flex gap-3 mb-3">
-                                    <!-- Logo -->
-                                    <div class="bg-light border rounded-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 60px; height: 60px;">
-                                        <i class="fa-solid fa-chart-line fa-2x text-warning"></i>
-                                    </div>
+                             <!-- Internship Card 3 -->
+                             <div class="card-premium p-4 job-item-card mb-4">
+                                 <div class="d-flex gap-3 mb-3">
+                                     <!-- Logo -->
+                                     <div class="bg-light border rounded-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 60px; height: 60px;">
+                                         <i class="fa-solid fa-chart-line fa-2x text-warning"></i>
+                                     </div>
 
-                                    <!-- Main Body -->
-                                    <div class="flex-grow-1 min-width-0">
-                                        <div class="d-flex justify-content-between align-items-start gap-2">
-                                            <h5 class="fw-bold text-secondary mb-1 text-truncate">Social Media Marketing Intern</h5>
-                                            <button class="btn-bookmark btn border-0 p-0 text-muted" aria-label="Bookmark Internship">
-                                                <i class="fa-regular fa-bookmark fs-5"></i>
-                                            </button>
-                                        </div>
+                                     <!-- Main Body -->
+                                     <div class="flex-grow-1 min-width-0">
+                                         <div class="d-flex justify-content-between align-items-start gap-2">
+                                             <h5 class="fw-bold text-secondary mb-1 text-truncate">Social Media Marketing Intern</h5>
+                                             <button class="btn-bookmark btn border-0 p-0 text-muted" aria-label="Bookmark Internship">
+                                                 <i class="fa-regular fa-bookmark fs-5"></i>
+                                             </button>
+                                         </div>
 
-                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
-                                            <span class="text-primary fw-semibold fs-7"><i class="fa-solid fa-building me-1"></i>GrowthHack Inc.</span>
-                                            <span class="badge bg-light-primary text-primary px-2 py-0.5 rounded-2 fs-9"><i class="fa-solid fa-location-dot me-1 animate-icon-pin"></i>Remote</span>
-                                        </div>
+                                         <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
+                                             <span class="text-primary fw-semibold fs-7"><i class="fa-solid fa-building me-1"></i>GrowthHack Inc.</span>
+                                             <span class="badge bg-light-primary text-primary px-2 py-0.5 rounded-2 fs-9"><i class="fa-solid fa-location-dot me-1 animate-icon-pin"></i>Remote</span>
+                                         </div>
 
-                                        <p class="text-muted fs-8 mb-3 leading-relaxed">Oversee platform channels, track page interaction logs, write promotional copies, and manage content pipelines. You will write engaging content posts, perform keyword analytics research, and assist on campaign analytics dashboards.</p>
+                                         <p class="text-muted fs-8 mb-3 leading-relaxed">Oversee platform channels, track page interaction logs, write promotional copies, and manage content pipelines. You will write engaging content posts, perform keyword analytics research, and assist on campaign analytics dashboards.</p>
 
-                                        <div class="d-flex flex-wrap gap-1">
-                                            <span class="badge-skill">SEO</span>
-                                            <span class="badge-skill">Analytics</span>
-                                            <span class="badge-skill">Copywriting</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                         <div class="d-flex flex-wrap gap-1">
+                                             <span class="badge-skill">SEO</span>
+                                             <span class="badge-skill">Analytics</span>
+                                             <span class="badge-skill">Copywriting</span>
+                                         </div>
+                                     </div>
+                                 </div>
 
-                                <!-- Divider and Footer info -->
-                                <div class="border-top pt-3 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
-                                    <!-- Left: Info Bar -->
-                                    <div class="d-flex flex-wrap gap-3 fs-8 text-muted">
-                                        <span class="d-inline-flex align-items-center"><i class="fa-solid fa-hand-holding-dollar text-warning me-1.5 animate-icon-stipend"></i><strong>$1,000</strong>/mo</span>
-                                        <span class="text-light-border d-none d-sm-inline">|</span>
-                                        <span class="d-inline-flex align-items-center"><i class="fa-regular fa-clock text-warning me-1.5"></i><strong>3 Months</strong></span>
-                                        <span class="text-light-border d-none d-sm-inline">|</span>
-                                        <span class="d-inline-flex align-items-center"><i class="fa-regular fa-calendar-days text-warning me-1.5 animate-icon-calendar"></i>Deadline: <strong>Aug 25, 2026</strong></span>
-                                    </div>
+                                 <!-- Divider and Footer info -->
+                                 <div class="border-top pt-3 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                                     <!-- Left: Info Bar -->
+                                     <div class="d-flex flex-wrap gap-3 fs-8 text-muted">
+                                         <span class="d-inline-flex align-items-center"><i class="fa-solid fa-hand-holding-dollar text-warning me-1.5 animate-icon-stipend"></i><strong>$1,000</strong>/mo</span>
+                                         <span class="text-light-border d-none d-sm-inline">|</span>
+                                         <span class="d-inline-flex align-items-center"><i class="fa-regular fa-clock text-warning me-1.5"></i><strong>3 Months</strong></span>
+                                         <span class="text-light-border d-none d-sm-inline">|</span>
+                                         <span class="d-inline-flex align-items-center"><i class="fa-regular fa-calendar-days text-warning me-1.5 animate-icon-calendar"></i>Deadline: <strong>Aug 25, 2026</strong></span>
+                                     </div>
 
-                                    <!-- Right: Action Buttons -->
-                                    <div class="d-flex gap-2 justify-content-end">
-                                        <a href="apply.html" class="btn btn-outline-secondary btn-sm px-3 rounded-3 fs-8 py-2">View Details</a>
-                                        <button class="btn btn-primary btn-sm px-4 rounded-3 shadow-sm fs-8 py-2" onclick="openQuickApply('Social Media Marketing Intern', 'GrowthHack Inc.')">Apply Now</button>
-                                    </div>
+                                     <!-- Right: Action Buttons -->
+                                     <div class="d-flex gap-2 justify-content-end">
+                                         <button type="button" class="btn btn-outline-secondary btn-sm px-3 rounded-3 fs-8 py-2" onclick="openQuickApply('Social Media Marketing Intern', 'GrowthHack Inc.')">View Details</button>
+                                         <button class="btn btn-primary btn-sm px-4 rounded-3 shadow-sm fs-8 py-2" onclick="openQuickApply('Social Media Marketing Intern', 'GrowthHack Inc.')">Apply Now</button>
+                                     </div>
                                 </div>
                             </div>
 

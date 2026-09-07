@@ -9,7 +9,7 @@
         <!-- Breadcrumb Navigation -->
         <nav aria-label="breadcrumb" class="breadcrumb-custom">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item breadcrumb-item-custom"><a href="company-dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item breadcrumb-item-custom"><a href="company-dashboard.aspx">Dashboard</a></li>
                 <li class="breadcrumb-item breadcrumb-item-custom active" aria-current="page">Manage Internships</li>
             </ol>
         </nav>
@@ -19,7 +19,7 @@
                 <h2 class="fw-bold text-secondary mb-1">Manage Posted Opportunities</h2>
                 <p class="text-muted mb-0">Review metrics, edit descriptions, or remove active listings</p>
             </div>
-            <a href="add-internship.html" class="btn btn-primary"><i class="fa-solid fa-circle-plus me-2"></i>Post New Opportunity</a>
+            <a href="add-internship.aspx" class="btn btn-primary"><i class="fa-solid fa-circle-plus me-2"></i>Post New Opportunity</a>
         </div>
 
         <!-- Table Toolbar -->
@@ -56,8 +56,8 @@
                             <span class="badge bg-light-info text-info px-2.5 py-1.5 fs-9 rounded-pill fw-bold"><i class="fa-solid fa-user-group me-1"></i>18 Applicants</span>
                         </td>
                         <td class="text-end">
-                            <a href="applicants.html" class="btn btn-light btn-sm text-primary fw-bold me-1" data-bs-toggle="tooltip" title="View Applicants"><i class="fa-solid fa-user-group"></i></a>
-                            <a href="add-internship.html?edit=true" class="btn btn-light btn-sm text-warning fw-bold me-1" data-bs-toggle="tooltip" title="Edit Listing"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="applicants.aspx" class="btn btn-light btn-sm text-primary fw-bold me-1" data-bs-toggle="tooltip" title="View Applicants"><i class="fa-solid fa-user-group"></i></a>
+                            <a href="add-internship.aspx?edit=true" class="btn btn-light btn-sm text-warning fw-bold me-1" data-bs-toggle="tooltip" title="Edit Listing"><i class="fa-solid fa-pen-to-square"></i></a>
                             <a href="#" class="btn btn-light btn-sm text-danger fw-bold btn-delete-internship" data-bs-toggle="tooltip" title="Delete Listing"><i class="fa-solid fa-trash-can"></i></a>
                         </td>
                     </tr>
@@ -73,8 +73,8 @@
                             <span class="badge bg-light-info text-info px-2.5 py-1.5 fs-9 rounded-pill fw-bold"><i class="fa-solid fa-user-group me-1"></i>12 Applicants</span>
                         </td>
                         <td class="text-end">
-                            <a href="applicants.html" class="btn btn-light btn-sm text-primary fw-bold me-1" data-bs-toggle="tooltip" title="View Applicants"><i class="fa-solid fa-user-group"></i></a>
-                            <a href="add-internship.html?edit=true" class="btn btn-light btn-sm text-warning fw-bold me-1" data-bs-toggle="tooltip" title="Edit Listing"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="applicants.aspx" class="btn btn-light btn-sm text-primary fw-bold me-1" data-bs-toggle="tooltip" title="View Applicants"><i class="fa-solid fa-user-group"></i></a>
+                            <a href="add-internship.aspx?edit=true" class="btn btn-light btn-sm text-warning fw-bold me-1" data-bs-toggle="tooltip" title="Edit Listing"><i class="fa-solid fa-pen-to-square"></i></a>
                             <a href="#" class="btn btn-light btn-sm text-danger fw-bold btn-delete-internship" data-bs-toggle="tooltip" title="Delete Listing"><i class="fa-solid fa-trash-can"></i></a>
                         </td>
                     </tr>
@@ -90,8 +90,8 @@
                             <span class="badge bg-light-info text-info px-2.5 py-1.5 fs-9 rounded-pill fw-bold"><i class="fa-solid fa-user-group me-1"></i>15 Applicants</span>
                         </td>
                         <td class="text-end">
-                            <a href="applicants.html" class="btn btn-light btn-sm text-primary fw-bold me-1" data-bs-toggle="tooltip" title="View Applicants"><i class="fa-solid fa-user-group"></i></a>
-                            <a href="add-internship.html?edit=true" class="btn btn-light btn-sm text-warning fw-bold me-1" data-bs-toggle="tooltip" title="Edit Listing"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="applicants.aspx" class="btn btn-light btn-sm text-primary fw-bold me-1" data-bs-toggle="tooltip" title="View Applicants"><i class="fa-solid fa-user-group"></i></a>
+                            <a href="add-internship.aspx?edit=true" class="btn btn-light btn-sm text-warning fw-bold me-1" data-bs-toggle="tooltip" title="Edit Listing"><i class="fa-solid fa-pen-to-square"></i></a>
                             <a href="#" class="btn btn-light btn-sm text-danger fw-bold btn-delete-internship" data-bs-toggle="tooltip" title="Delete Listing"><i class="fa-solid fa-trash-can"></i></a>
                         </td>
                     </tr>

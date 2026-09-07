@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/student/student.Master" AutoEventWireup="true" CodeBehind="student-dashboard.aspx.cs" Inherits="SkillBridge.student.student_dashboard" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/student/student.Master" AutoEventWireup="true" CodeBehind="student-dashboard.aspx.cs" Inherits="SkillBridge.student.student_dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -8,7 +8,7 @@
         <!-- Breadcrumb Navigation -->
         <nav aria-label="breadcrumb" class="breadcrumb-custom">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item breadcrumb-item-custom"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item breadcrumb-item-custom"><a href="../index.aspx">Home</a></li>
                 <li class="breadcrumb-item breadcrumb-item-custom active" aria-current="page">Student Dashboard</li>
             </ol>
         </nav>
@@ -19,7 +19,7 @@
                 <h2 class="fw-bold text-secondary mb-1">Hello, John Doe!</h2>
                 <p class="text-muted mb-0">Here is the update of your active applications and recommended positions.</p>
             </div>
-            <a href="internship-list.html" class="btn btn-primary shadow-sm"><i class="fa-solid fa-magnifying-glass me-2"></i>Browse Internships</a>
+            <a href="../internship-list.aspx" class="btn btn-primary shadow-sm"><i class="fa-solid fa-magnifying-glass me-2"></i>Browse Internships</a>
         </div>
 
         <!-- Metric Stat Cards Grid -->
@@ -124,10 +124,10 @@
                     <div class="bg-white border rounded-3 p-4 shadow-sm">
                         <h5 class="fw-bold text-secondary mb-3">Quick Actions</h5>
                         <div class="d-grid gap-2">
-                            <a href="student-profile.html" class="btn btn-outline-primary text-start"><i class="fa-solid fa-user-pen me-2"></i>Edit Profile Info</a>
-                            <a href="recommendation.html" class="btn btn-outline-info text-start text-dark"><i class="fa-solid fa-sparkles me-2"></i>Check Recommendations</a>
-                            <a href="internship-list.html" class="btn btn-outline-secondary text-start"><i class="fa-solid fa-magnifying-glass me-2"></i>Search Opportunities</a>
-                            <a href="my-applications.html" class="btn btn-outline-dark text-start"><i class="fa-solid fa-list me-2"></i>View Applied Jobs</a>
+                            <a href="student-profile.aspx" class="btn btn-outline-primary text-start"><i class="fa-solid fa-user-pen me-2"></i>Edit Profile Info</a>
+                            <a href="recommendation.aspx" class="btn btn-outline-info text-start text-dark"><i class="fa-solid fa-sparkles me-2"></i>Check Recommendations</a>
+                            <a href="../internship-list.aspx" class="btn btn-outline-secondary text-start"><i class="fa-solid fa-magnifying-glass me-2"></i>Search Opportunities</a>
+                            <a href="my-applications.aspx" class="btn btn-outline-dark text-start"><i class="fa-solid fa-list me-2"></i>View Applied Jobs</a>
                         </div>
                     </div>
 
@@ -138,7 +138,7 @@
                         </div>
                         <h5 class="fw-bold mb-2">90% Match Found!</h5>
                         <p class="fs-8 mb-3 opacity-90 text-dark">A new Frontend Developer Internship position at Spotify was just published that matches your exact profile skills.</p>
-                        <a href="internship-list.html" class="btn btn-primary btn-sm px-3 py-1.5 shadow-sm">Check Listing <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                        <a href="../internship-list.aspx" class="btn btn-primary btn-sm px-3 py-1.5 shadow-sm">Check Listing <i class="fa-solid fa-arrow-right ms-1"></i></a>
                     </div>
                 </div>
             </div>

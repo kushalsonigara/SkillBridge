@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="about.aspx.cs" Inherits="SkillBridge.about" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="about.aspx.cs" Inherits="SkillBridge.about" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder2">
@@ -20,8 +20,8 @@
           <p class="lead text-muted mb-4">SkillBridge is a next-generation platform designed to streamline internship placements for students, companies, and academic coordinators.</p>
           <p class="mb-4">We understand the hurdles students face when transitioning from academic fields into professional spaces. Simultaneously, we recognize how challenging it is for companies to target the right talent matches quickly. SkillBridge automates standard applications, tracks reviews transparently, and provides metrics to administrators on student placement progress.</p>
           <div class="d-flex gap-3">
-            <a href="register.html" class="btn btn-primary px-4"><i class="fa-solid fa-user-plus me-2"></i>Create Free Account</a>
-            <a href="contact.html" class="btn btn-outline-secondary px-4">Contact Sales</a>
+            <a href="register.aspx" class="btn btn-primary px-4"><i class="fa-solid fa-user-plus me-2"></i>Create Free Account</a>
+            <a href="contact.aspx" class="btn btn-outline-secondary px-4">Contact Sales</a>
           </div>
         </div>
         <div class="col-lg-6">
@@ -148,7 +148,7 @@
         </div>
       </div>
     </div>
+  </section>
   </main>
-</section>
 </asp:Content>
 

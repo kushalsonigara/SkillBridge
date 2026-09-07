@@ -9,8 +9,8 @@
         <!-- Breadcrumb Navigation -->
         <nav aria-label="breadcrumb" class="breadcrumb-custom">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item breadcrumb-item-custom"><a href="student-dashboard.html">Dashboard</a></li>
-                <li class="breadcrumb-item breadcrumb-item-custom"><a href="my-applications.html">Applications</a></li>
+                <li class="breadcrumb-item breadcrumb-item-custom"><a href="student-dashboard.aspx">Dashboard</a></li>
+                <li class="breadcrumb-item breadcrumb-item-custom"><a href="my-applications.aspx">Applications</a></li>
                 <li class="breadcrumb-item breadcrumb-item-custom active" aria-current="page">Track Flow</li>
             </ol>
         </nav>

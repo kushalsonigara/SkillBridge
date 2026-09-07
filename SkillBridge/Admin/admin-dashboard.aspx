@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/admin.Master" AutoEventWireup="true" CodeBehind="admin-dashboard.aspx.cs" Inherits="SkillBridge.Admin.admin_dashboard" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/admin.Master" AutoEventWireup="true" CodeBehind="admin-dashboard.aspx.cs" Inherits="SkillBridge.Admin.admin_dashboard" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder2">
@@ -7,7 +7,7 @@
         <!-- Breadcrumb Navigation -->
         <nav aria-label="breadcrumb" class="breadcrumb-custom">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item breadcrumb-item-custom"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item breadcrumb-item-custom"><a href="../index.aspx">Home</a></li>
             <li class="breadcrumb-item breadcrumb-item-custom active" aria-current="page">Admin Dashboard</li>
           </ol>
         </nav>

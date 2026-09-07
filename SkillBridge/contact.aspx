@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="SkillBridge.contact" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="SkillBridge.contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -22,7 +22,7 @@
                             <h4 class="fw-bold text-secondary mb-1">Send a Message</h4>
                             <p class="text-muted fs-7 mb-4">Have inquiries? Submit the contact form below and our staff will respond within 24 hours.</p>
 
-                            <form class="needs-validation-custom" data-success-msg="Message successfully sent! We will contact you soon." data-redirect="contact.html" novalidate>
+                            <form class="needs-validation-custom" data-success-msg="Message successfully sent! We will contact you soon." data-redirect="contact.aspx" novalidate>
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label for="contact-name" class="form-label form-label-custom">Your Name</label>
@@ -124,6 +124,7 @@
                 </div>
 
             </div>
+        </section>
     </main>
 
 </asp:Content>

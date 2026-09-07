@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/student/student.Master" AutoEventWireup="true" CodeBehind="my-applications.aspx.cs" Inherits="SkillBridge.student.my_applications" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/student/student.Master" AutoEventWireup="true" CodeBehind="my-applications.aspx.cs" Inherits="SkillBridge.student.my_applications" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -9,7 +9,7 @@
         <!-- Breadcrumb Navigation -->
         <nav aria-label="breadcrumb" class="breadcrumb-custom">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item breadcrumb-item-custom"><a href="student-dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item breadcrumb-item-custom"><a href="student-dashboard.aspx">Dashboard</a></li>
                 <li class="breadcrumb-item breadcrumb-item-custom active" aria-current="page">My Applications</li>
             </ol>
         </nav>
@@ -19,7 +19,7 @@
                 <h2 class="fw-bold text-secondary mb-1">My Applications</h2>
                 <p class="text-muted mb-0">Review status updates for all submitted applications</p>
             </div>
-            <a href="internship-list.html" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass me-2"></i>Apply for More</a>
+            <a href="../internship-list.aspx" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass me-2"></i>Apply for More</a>
         </div>
 
         <!-- Table Toolbar -->
@@ -69,7 +69,7 @@
                             <span class="status-badge status-badge-accepted">Accepted</span>
                         </td>
                         <td>
-                            <a href="track-application.html?id=1" class="btn btn-outline-primary btn-sm px-3 rounded-2"><i class="fa-solid fa-route me-1"></i>Track Flow</a>
+                            <a href="track-application.aspx?id=1" class="btn btn-outline-primary btn-sm px-3 rounded-2"><i class="fa-solid fa-route me-1"></i>Track Flow</a>
                         </td>
                     </tr>
                     <tr>
@@ -85,7 +85,7 @@
                             <span class="status-badge status-badge-interview">Interview</span>
                         </td>
                         <td>
-                            <a href="track-application.html?id=2" class="btn btn-outline-primary btn-sm px-3 rounded-2"><i class="fa-solid fa-route me-1"></i>Track Flow</a>
+                            <a href="track-application.aspx?id=2" class="btn btn-outline-primary btn-sm px-3 rounded-2"><i class="fa-solid fa-route me-1"></i>Track Flow</a>
                         </td>
                     </tr>
                     <tr>
@@ -101,7 +101,7 @@
                             <span class="status-badge status-badge-pending">Pending</span>
                         </td>
                         <td>
-                            <a href="track-application.html?id=3" class="btn btn-outline-primary btn-sm px-3 rounded-2"><i class="fa-solid fa-route me-1"></i>Track Flow</a>
+                            <a href="track-application.aspx?id=3" class="btn btn-outline-primary btn-sm px-3 rounded-2"><i class="fa-solid fa-route me-1"></i>Track Flow</a>
                         </td>
                     </tr>
                     <tr>
@@ -117,7 +117,7 @@
                             <span class="status-badge status-badge-rejected">Rejected</span>
                         </td>
                         <td>
-                            <a href="track-application.html?id=4" class="btn btn-outline-primary btn-sm px-3 rounded-2"><i class="fa-solid fa-route me-1"></i>Track Flow</a>
+                            <a href="track-application.aspx?id=4" class="btn btn-outline-primary btn-sm px-3 rounded-2"><i class="fa-solid fa-route me-1"></i>Track Flow</a>
                         </td>
                     </tr>
                 </tbody>

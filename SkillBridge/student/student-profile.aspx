@@ -9,7 +9,7 @@
         <!-- Breadcrumb Navigation -->
         <nav aria-label="breadcrumb" class="breadcrumb-custom">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item breadcrumb-item-custom"><a href="student-dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item breadcrumb-item-custom"><a href="student-dashboard.aspx">Dashboard</a></li>
                 <li class="breadcrumb-item breadcrumb-item-custom active" aria-current="page">My Profile</li>
             </ol>
         </nav>
@@ -17,7 +17,7 @@
         <h2 class="fw-bold text-secondary mb-4">Edit Profile Settings</h2>
 
         <!-- Profile Edit Form -->
-        <form class="needs-validation-custom" data-success-msg="Profile updated successfully!" data-redirect="student-profile.html" novalidate>
+        <form class="needs-validation-custom" data-success-msg="Profile updated successfully!" data-redirect="student-profile.aspx" novalidate>
             <div class="row g-4">
 
                 <!-- Sidebar: Avatar and resume -->

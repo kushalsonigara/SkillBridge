@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/student/student.Master" AutoEventWireup="true" CodeBehind="recommendation.aspx.cs" Inherits="SkillBridge.student.recommendation" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/student/student.Master" AutoEventWireup="true" CodeBehind="recommendation.aspx.cs" Inherits="SkillBridge.student.recommendation" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -9,7 +9,7 @@
         <!-- Breadcrumb Navigation -->
         <nav aria-label="breadcrumb" class="breadcrumb-custom">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item breadcrumb-item-custom"><a href="student-dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item breadcrumb-item-custom"><a href="student-dashboard.aspx">Dashboard</a></li>
                 <li class="breadcrumb-item breadcrumb-item-custom active" aria-current="page">Recommendations</li>
             </ol>
         </nav>
@@ -54,7 +54,7 @@
                             <span class="d-block text-muted fs-9">STIPEND</span>
                             <span class="fw-bold text-secondary fs-8">$1,200/mo</span>
                         </div>
-                        <a href="apply.html?apply=true" class="btn btn-primary btn-sm px-3 rounded-2 shadow-sm">Apply Now</a>
+                        <a href="../internship-list.aspx" class="btn btn-primary btn-sm px-3 rounded-2 shadow-sm">Apply Now</a>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
                             <span class="d-block text-muted fs-9">STIPEND</span>
                             <span class="fw-bold text-secondary fs-8">$1,400/mo</span>
                         </div>
-                        <a href="apply.html?apply=true" class="btn btn-primary btn-sm px-3 rounded-2 shadow-sm">Apply Now</a>
+                        <a href="../internship-list.aspx" class="btn btn-primary btn-sm px-3 rounded-2 shadow-sm">Apply Now</a>
                     </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@
                             <span class="d-block text-muted fs-9">STIPEND</span>
                             <span class="fw-bold text-secondary fs-8">$1,500/mo</span>
                         </div>
-                        <a href="apply.html?apply=true" class="btn btn-primary btn-sm px-3 rounded-2 shadow-sm">Apply Now</a>
+                        <a href="../internship-list.aspx" class="btn btn-primary btn-sm px-3 rounded-2 shadow-sm">Apply Now</a>
                     </div>
                 </div>
             </div>

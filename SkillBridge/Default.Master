@@ -1,10 +1,23 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="SkillBridge.Default" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="SkillBridge.Default" %>
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head runat="server">
-    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillBridge - Internship Management Portal</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/tables.css" rel="stylesheet">
+    <link href="css/forms.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -12,13 +25,6 @@
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                <!-- CSS Stylesheets -->
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-                <link href="../css/style.css" rel="stylesheet">
-                <link href="../css/tables.css" rel="stylesheet">
-                <link href="../css/forms.css" rel="stylesheet">
-                <link href="../css/responsive.css" rel="stylesheet">
                 <!-- Loader wrapper -->
                 <div id="loader-wrapper">
                     <div class="loader"></div>
@@ -29,7 +35,7 @@
                     <!-- Shared Header Navbar -->
                     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
                         <div class="container">
-                            <a class="navbar-brand navbar-brand-custom" href="index.html">
+                            <a class="navbar-brand navbar-brand-custom" href="index.aspx">
                                 <i class="fa-solid fa-graduation-cap text-accent"></i>
                                 <span>Skill</span>Bridge
                             </a>
@@ -39,24 +45,24 @@
                             <div class="collapse navbar-collapse" id="mainNavbar">
                                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                                     <li class="nav-item">
-                                        <a class="nav-link nav-link-custom active" href="index.html">Home</a>
+                                        <a class="nav-link nav-link-custom" href="index.aspx">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link nav-link-custom" href="about.html">About Us</a>
+                                        <a class="nav-link nav-link-custom" href="about.aspx">About Us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link nav-link-custom" href="internship-list.html">Find Internships</a>
+                                        <a class="nav-link nav-link-custom" href="internship-list.aspx">Find Internships</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link nav-link-custom" href="contact.html">Contact</a>
+                                        <a class="nav-link nav-link-custom" href="contact.aspx">Contact</a>
                                     </li>
                                 </ul>
                                 <div class="header-actions">
-                                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                                    <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
                                         <i class="fa-solid fa-moon"></i>
                                     </button>
-                                    <a href="login.html" class="btn btn-outline-primary btn-nav">Log In</a>
-                                    <a href="register.html" class="btn btn-primary btn-nav shadow-sm">Register</a>
+                                    <a href="login.aspx" class="btn btn-outline-primary btn-nav">Log In</a>
+                                    <a href="register.aspx" class="btn btn-primary btn-nav shadow-sm">Register</a>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +77,7 @@
                     <div class="container">
                         <div class="row g-4 mb-5">
                             <div class="col-lg-4 col-md-6">
-                                <a class="navbar-brand navbar-brand-custom text-white mb-3" href="index.html">
+                                <a class="navbar-brand navbar-brand-custom text-white mb-3" href="index.aspx">
                                     <i class="fa-solid fa-graduation-cap text-accent"></i>
                                     <span>Skill</span>Bridge
                                 </a>
@@ -85,33 +91,33 @@
                             </div>
                             <div class="col-lg-2 col-md-6">
                                 <h5>For Students</h5>
-                                <a href="internship-list.html" class="footer-link">Find Internships</a>
-                                <a href="student-dashboard.html" class="footer-link">Dashboard</a>
-                                <a href="recommendation.html" class="footer-link">Recommendations</a>
-                                <a href="my-applications.html" class="footer-link">Track Applications</a>
+                                <a href="internship-list.aspx" class="footer-link">Find Internships</a>
+                                <a href="student/student-dashboard.aspx" class="footer-link">Dashboard</a>
+                                <a href="student/recommendation.aspx" class="footer-link">Recommendations</a>
+                                <a href="student/my-applications.aspx" class="footer-link">Track Applications</a>
                             </div>
                             <div class="col-lg-2 col-md-6">
                                 <h5>For Employers</h5>
-                                <a href="register.html?type=company" class="footer-link">Post an Internship</a>
-                                <a href="company-dashboard.html" class="footer-link">Company Dashboard</a>
-                                <a href="applicants.html" class="footer-link">Browse Applicants</a>
-                                <a href="login.html" class="footer-link">Employer Login</a>
+                                <a href="register.aspx?type=company" class="footer-link">Post an Internship</a>
+                                <a href="company/company-dashboard.aspx" class="footer-link">Company Dashboard</a>
+                                <a href="company/applicants.aspx" class="footer-link">Browse Applicants</a>
+                                <a href="login.aspx" class="footer-link">Employer Login</a>
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <h5>Quick Access</h5>
-                                <a href="about.html" class="footer-support-link">
+                                <a href="about.aspx" class="footer-support-link">
                                     <span>About SkillBridge</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
-                                <a href="contact.html" class="footer-support-link">
+                                <a href="contact.aspx" class="footer-support-link">
                                     <span>Contact Support</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
-                                <a href="login.html" class="footer-support-link">
+                                <a href="login.aspx" class="footer-support-link">
                                     <span>Sign In</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
-                                <a href="register.html" class="footer-support-link mb-0">
+                                <a href="register.aspx" class="footer-support-link mb-0">
                                     <span>Create Account</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
@@ -130,7 +136,7 @@
 
                 <!-- Scripts -->
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-                <script src="../js/script.js"></script>
+                <script src="js/script.js"></script>
             </asp:ContentPlaceHolder>
         </div>
     </form>

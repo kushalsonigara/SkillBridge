@@ -10,8 +10,8 @@
         <!-- Breadcrumb Navigation -->
         <nav aria-label="breadcrumb" class="breadcrumb-custom">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item breadcrumb-item-custom"><a href="company-dashboard.html">Dashboard</a></li>
-                <li class="breadcrumb-item breadcrumb-item-custom"><a href="internship-management.html">Positions</a></li>
+                <li class="breadcrumb-item breadcrumb-item-custom"><a href="company-dashboard.aspx">Dashboard</a></li>
+                <li class="breadcrumb-item breadcrumb-item-custom"><a href="internship-management.aspx">Positions</a></li>
                 <li id="breadcrumb-action-node" class="breadcrumb-item breadcrumb-item-custom active" aria-current="page">Post Position</li>
             </ol>
         </nav>
@@ -19,7 +19,7 @@
         <h2 id="page-title-node" class="fw-bold text-secondary mb-4">Post a New Internship</h2>
 
         <!-- Position Form -->
-        <form class="needs-validation-custom" data-success-msg="Internship position successfully published!" data-redirect="internship-management.html" novalidate>
+        <form class="needs-validation-custom" data-success-msg="Internship position successfully published!" data-redirect="internship-management.aspx" novalidate>
             <div class="row g-4">
 
                 <div class="col-lg-8">
@@ -119,7 +119,7 @@
                         <p class="text-muted fs-8 mb-4">Once published, this internship position will instantly reflect in public listing pages and skill-matching alerts for students.</p>
                         <div class="d-grid gap-2">
                             <button type="submit" class="btn btn-primary"><i class="fa-solid fa-circle-check me-2"></i>Publish Opening</button>
-                            <a href="internship-management.html" class="btn btn-outline-secondary">Cancel & Go Back</a>
+                            <a href="internship-management.aspx" class="btn btn-outline-secondary">Cancel & Go Back</a>
                         </div>
                     </div>
                 </div>
