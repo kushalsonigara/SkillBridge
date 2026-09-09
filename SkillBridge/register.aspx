@@ -104,76 +104,600 @@
                             </form>
                         </div>
 
-                        <!-- Company Registration Card -->
-                        <div id="company-reg-card" class="form-card d-none auth-card-glow">
-                            <h3 class="fw-bold text-secondary mb-1">Partner Registration</h3>
-                            <p class="text-muted fs-7 mb-4">Register as a company hiring partner to post positions and manage student applicants.</p>
+                           <!-- Company Registration Card -->
+<div id="company-reg-card" class="form-card d-none auth-card-glow">
+    <!-- Company Registration -->
+<div id="company-reg-card" class="form-card d-none auth-card-glow">
 
-                            <form class="needs-validation-custom" data-success-msg="Company account successfully registered! Redirecting to login page." data-redirect="login.aspx" novalidate>
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label for="company-name" class="form-label form-label-custom">Company Name</label>
-                                        <input type="text" id="company-name" class="form-control form-control-custom" placeholder="e.g. Stripe Inc." required>
-                                        <div class="invalid-feedback-custom">Please enter the company name.</div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="company-email" class="form-label form-label-custom">Corporate Email Address</label>
-                                        <input type="email" id="company-email" class="form-control form-control-custom" placeholder="e.g. hr@stripe.com" required>
-                                        <div class="invalid-feedback-custom">Please enter a valid corporate email.</div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="company-contact" class="form-label form-label-custom">Contact Person Name</label>
-                                        <input type="text" id="company-contact" class="form-control form-control-custom" placeholder="e.g. Sarah Connor" required>
-                                        <div class="invalid-feedback-custom">Please specify the contact person's name.</div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="company-website" class="form-label form-label-custom">Website URL</label>
-                                        <input type="url" id="company-website" class="form-control form-control-custom" placeholder="e.g. https://stripe.com" required>
-                                        <div class="invalid-feedback-custom">Please enter a valid website URL.</div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="company-password" class="form-label form-label-custom">Password</label>
-                                        <div class="password-field-container">
-                                            <input type="password" id="company-password" class="form-control form-control-custom" placeholder="Min. 8 characters" required>
-                                            <button type="button" class="password-toggle-btn"><i class="fa-solid fa-eye"></i></button>
-                                        </div>
-                                        <div class="invalid-feedback-custom">Password is required.</div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="company-confirm-password" class="form-label form-label-custom">Confirm Password</label>
-                                        <div class="password-field-container">
-                                            <input type="password" id="company-confirm-password" class="form-control form-control-custom" placeholder="Verify password" required>
-                                            <button type="button" class="password-toggle-btn"><i class="fa-solid fa-eye"></i></button>
-                                        </div>
-                                        <div class="invalid-feedback-custom">Passwords must match.</div>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="company-desc" class="form-label form-label-custom">Company Description</label>
-                                        <textarea id="company-desc" class="form-control form-control-custom" rows="3" placeholder="Provide a brief overview of the organization and target industries..." required></textarea>
-                                        <div class="invalid-feedback-custom">Please write a short description.</div>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="company-address" class="form-label form-label-custom">HQ Location Address</label>
-                                        <input type="text" id="company-address" class="form-control form-control-custom" placeholder="e.g. San Francisco, CA" required>
-                                        <div class="invalid-feedback-custom">Please specify the company address.</div>
-                                    </div>
+    <h3 class="fw-bold text-secondary mb-1">
+        Create Company Profile
+    </h3>
 
-                                    <div class="col-12 mt-4">
-                                        <div class="form-check mb-3">
-                                            <input class="form-check-input text-primary" type="checkbox" id="company-terms" required>
-                                            <label class="form-check-label fs-7 text-muted" for="company-terms">
-                                                I certify that I represent this corporate entity and agree to all portal policies.
-                                            </label>
-                                            <div class="invalid-feedback-custom">You must accept the verification statement before registering.</div>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary w-100 py-2"><i class="fa-solid fa-briefcase me-2"></i>Register Company Account</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+    <p class="text-muted fs-7 mb-4">
+        Register your company to post and manage premium internships.
+    </p>
 
-                        <div class="text-center mt-4 text-muted fs-7">
-                            Already have an account? <a href="login.aspx" class="fw-bold">Log in here</a>
+    <form class="needs-validation-custom" novalidate>
+
+        <div class="row g-3">
+
+            <!-- Company Name -->
+            <div class="col-md-6">
+                <label class="form-label form-label-custom">
+                    Company Name
+                </label>
+
+                <input type="text"
+                       id="company-name"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. Microsoft India"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please enter company name.
+                </div>
+            </div>
+
+
+            <!-- Email -->
+            <div class="col-md-6">
+                <label class="form-label form-label-custom">
+                    Email Address
+                </label>
+
+                <input type="email"
+                       id="company-email"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. hr@company.com"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please enter a valid email address.
+                </div>
+            </div>
+
+
+            <!-- Mobile -->
+            <div class="col-md-6">
+                <label class="form-label form-label-custom">
+                    Mobile Number
+                </label>
+
+                <input type="tel"
+                       id="company-phone"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. 10 digit number"
+                       maxlength="10"
+                       pattern="[0-9]{10}"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please enter a valid 10 digit mobile number.
+                </div>
+            </div>
+
+
+            <!-- Company Website -->
+            <div class="col-md-6">
+                <label class="form-label form-label-custom">
+                    Company Website
+                </label>
+
+                <input type="url"
+                       id="company-website"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. https://company.com"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please enter company website.
+                </div>
+            </div>
+
+
+            <!-- Industry -->
+            <div class="col-md-6">
+                <label class="form-label form-label-custom">
+                    Industry / Sector
+                </label>
+
+                <input type="text"
+                       id="company-industry"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. Information Technology"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please enter industry / sector.
+                </div>
+            </div>
+
+
+            <!-- Company Location -->
+            <div class="col-md-6">
+                <label class="form-label form-label-custom">
+                    Company Location
+                </label>
+
+                <input type="text"
+                       id="company-location"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. Ahmedabad, Gujarat"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please enter company location.
+                </div>
+            </div>
+
+
+            <!-- HR Name -->
+            <div class="col-md-6">
+                <label class="form-label form-label-custom">
+                    HR / Recruiter Name
+                </label>
+
+                <input type="text"
+                       id="company-contact"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. John Smith"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please enter HR / Recruiter name.
+                </div>
+            </div>
+
+
+            <!-- Internship Domains -->
+            <div class="col-md-6">
+                <label class="form-label form-label-custom">
+                    Internship Domains
+                </label>
+
+                <input type="text"
+                       id="company-domain"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. Java, Figma, SEO">
+            </div>
+
+
+            <!-- Password -->
+            <div class="col-md-6">
+
+                <label class="form-label form-label-custom">
+                    Password
+                </label>
+
+                <div class="password-field-container">
+
+                    <input type="password"
+                           id="company-password"
+                           class="form-control form-control-custom"
+                           placeholder="Min. 8 characters"
+                           minlength="8"
+                           required>
+
+                    <button type="button"
+                            class="password-toggle-btn">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="invalid-feedback-custom">
+                    Password must contain at least 8 characters.
+                </div>
+
+            </div>
+
+
+            <!-- Confirm Password -->
+            <div class="col-md-6">
+
+                <label class="form-label form-label-custom">
+                    Confirm Password
+                </label>
+
+                <div class="password-field-container">
+
+                    <input type="password"
+                           id="company-confirm-password"
+                           class="form-control form-control-custom"
+                           placeholder="Verify password"
+                           minlength="8"
+                           required>
+
+                    <button type="button"
+                            class="password-toggle-btn">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="invalid-feedback-custom">
+                    Please confirm your password.
+                </div>
+
+            </div>
+
+
+            <!-- Company Logo -->
+            <div class="col-12">
+
+                <label class="form-label form-label-custom">
+                    Upload Company Logo
+                </label>
+
+                <div class="upload-drag-zone">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                    <h6>
+                        Drag & drop your Company Logo here
+                        or click to browse
+                    </h6>
+
+                    <p class="upload-file-info mb-0">
+                        Accepted files: PNG, JPG, JPEG only (Max. 2MB)
+                    </p>
+
+                    <input type="file"
+                           id="company-logo"
+                           accept=".png,.jpg,.jpeg"
+                           required>
+
+                </div>
+
+                <div class="invalid-feedback-custom text-center mt-2">
+                    Please upload company logo.
+                </div>
+
+            </div>
+
+
+            <!-- Terms -->
+            <div class="col-12 mt-4">
+
+                <div class="form-check mb-3">
+
+                    <input class="form-check-input text-primary"
+                           type="checkbox"
+                           id="company-terms"
+                           required>
+
+                    <label class="form-check-label fs-7 text-muted"
+                           for="company-terms">
+
+                        I agree to the
+                        <a href="#">Terms & Conditions</a>
+                        and
+                        <a href="#">Privacy Policy</a>.
+
+                    </label>
+
+                    <div class="invalid-feedback-custom">
+                        You must accept the terms and conditions.
+                    </div>
+
+                </div>
+
+
+                <!-- Register Button -->
+                <button type="submit"
+                        class="btn btn-primary w-100 py-2">
+
+                    <i class="fa-solid fa-building me-2"></i>
+
+                    Register Company Account
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+    <h3 class="fw-bold text-secondary mb-1">
+        Create Company Profile
+    </h3>
+
+    <p class="text-muted fs-7 mb-4">
+        Register your company to post and manage premium internships.
+    </p>
+
+    <form class="needs-validation-custom"
+          data-success-msg="Company profile registered successfully! Redirecting to login page."
+          data-redirect="login.aspx"
+          novalidate>
+
+        <div class="row g-3">
+
+            <!-- Company Name -->
+            <div class="col-md-6">
+                <label for="company-name"
+                       class="form-label form-label-custom">
+                    Company Name
+                </label>
+
+                <input type="text"
+                       id="company-name"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. Microsoft India"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please enter the company name.
+                </div>
+            </div>
+
+
+            <!-- Email Address -->
+            <div class="col-md-6">
+                <label for="company-email"
+                       class="form-label form-label-custom">
+                    Email Address
+                </label>
+
+                <input type="email"
+                       id="company-email"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. hr@company.com"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please enter a valid email address.
+                </div>
+            </div>
+
+
+            <!-- Mobile Number -->
+            <div class="col-md-6">
+                <label for="company-phone"
+                       class="form-label form-label-custom">
+                    Mobile Number
+                </label>
+
+                <input type="tel"
+                       id="company-phone"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. 10 digit number"
+                       maxlength="10"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please enter your 10-digit mobile number.
+                </div>
+            </div>
+
+
+            <!-- Company Website -->
+            <div class="col-md-6">
+                <label for="company-website"
+                       class="form-label form-label-custom">
+                    Company Website
+                </label>
+
+                <input type="url"
+                       id="company-website"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. www.company.com"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please enter a valid website URL.
+                </div>
+            </div>
+
+
+            <!-- Industry / Sector -->
+            <div class="col-md-6">
+                <label for="company-industry"
+                       class="form-label form-label-custom">
+                    Industry / Sector
+                </label>
+
+                <input type="text"
+                       id="company-industry"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. Information Technology"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please specify the industry or sector.
+                </div>
+            </div>
+
+
+            <!-- Company Location -->
+            <div class="col-md-6">
+                <label for="company-location"
+                       class="form-label form-label-custom">
+                    Company Location
+                </label>
+
+                <input type="text"
+                       id="company-location"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. Ahmedabad, Gujarat"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please specify the company location.
+                </div>
+            </div>
+
+
+            <!-- Contact Person -->
+            <div class="col-md-6">
+                <label for="company-contact"
+                       class="form-label form-label-custom">
+                    HR / Recruiter Name
+                </label>
+
+                <input type="text"
+                       id="company-contact"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. John Smith"
+                       required>
+
+                <div class="invalid-feedback-custom">
+                    Please specify the HR / Recruiter name.
+                </div>
+            </div>
+
+
+            <!-- Internship Domains -->
+            <div class="col-md-6">
+                <label for="company-domain"
+                       class="form-label form-label-custom">
+                    Internship Domains
+                </label>
+
+                <input type="text"
+                       id="company-domain"
+                       class="form-control form-control-custom"
+                       placeholder="e.g. Java, Figma, SEO">
+            </div>
+
+
+            <!-- Password -->
+            <div class="col-md-6">
+                <label for="company-password"
+                       class="form-label form-label-custom">
+                    Password
+                </label>
+
+                <div class="password-field-container">
+
+                    <input type="password"
+                           id="company-password"
+                           class="form-control form-control-custom"
+                           placeholder="Min. 8 characters"
+                           required>
+
+                    <button type="button"
+                            class="password-toggle-btn">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+
+                </div>
+
+                <div class="invalid-feedback-custom">
+                    Password is required.
+                </div>
+            </div>
+
+
+            <!-- Confirm Password -->
+            <div class="col-md-6">
+                <label for="company-confirm-password"
+                       class="form-label form-label-custom">
+                    Confirm Password
+                </label>
+
+                <div class="password-field-container">
+
+                    <input type="password"
+                           id="company-confirm-password"
+                           class="form-control form-control-custom"
+                           placeholder="Verify password"
+                           required>
+
+                    <button type="button"
+                            class="password-toggle-btn">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+
+                </div>
+
+                <div class="invalid-feedback-custom">
+                    Passwords must match.
+                </div>
+            </div>
+
+
+            <!-- Company Logo -->
+            <div class="col-12">
+
+                <label class="form-label form-label-custom">
+                    Upload Company Logo (Image format)
+                </label>
+
+                <div class="upload-drag-zone">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                    <h6>
+                        Drag & drop your Company Logo here or click to browse
+                    </h6>
+
+                    <p class="upload-file-info mb-0">
+                        Accepted files: PNG, JPG, JPEG only (Max. 2MB)
+                    </p>
+
+                    <input type="file"
+                           id="company-logo"
+                           accept=".png,.jpg,.jpeg"
+                           required>
+
+                </div>
+
+                <div class="invalid-feedback-custom text-center mt-2">
+                    Company logo is required.
+                </div>
+
+            </div>
+
+
+            <!-- Terms & Register -->
+            <div class="col-12 mt-4">
+
+                <div class="form-check mb-3">
+
+                    <input class="form-check-input text-primary"
+                           type="checkbox"
+                           id="company-terms"
+                           required>
+
+                    <label class="form-check-label fs-7 text-muted"
+                           for="company-terms">
+
+                        I agree to the
+                        <a href="#">Terms & Conditions</a>
+                        and
+                        <a href="#">Privacy Policy</a>.
+
+                    </label>
+
+                    <div class="invalid-feedback-custom">
+                        You must accept the terms before registering.
+                    </div>
+
+                </div>
+
+
+                <button type="submit"
+                        class="btn btn-primary w-100 py-2">
+
+                    <i class="fa-solid fa-building me-2"></i>
+                    Register Company Account
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
                         </div>
 
                     </div>
@@ -192,6 +716,7 @@
       }
     });
     </script>
+    
+    <script src="js/validation.js"></script>
+
 </asp:Content>
-
-
