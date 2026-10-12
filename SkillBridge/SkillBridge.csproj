@@ -71,6 +71,10 @@
     <Content Include="about.aspx" />
     <Content Include="Admin\admin-dashboard.aspx" />
     <Content Include="Admin\reports.aspx" />
+    <Content Include="App_Data\SkillBridge_db.mdf" />
+    <Content Include="App_Data\SkillBridge_db_log.ldf">
+      <DependentUpon>SkillBridge_db.mdf</DependentUpon>
+    </Content>
     <Content Include="company\applicants.aspx" />
     <Content Include="company\company-dashboard.aspx" />
     <Content Include="company\add-internship.aspx" />
@@ -120,6 +124,7 @@
     </Compile>
     <Compile Include="Admin\admin.Master.cs">
       <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\admin.Master.designer.cs">
       <DependentUpon>admin.Master</DependentUpon>
@@ -161,6 +166,7 @@
     </Compile>
     <Compile Include="company\company.Master.cs">
       <DependentUpon>company.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="company\company.Master.designer.cs">
       <DependentUpon>company.Master</DependentUpon>
@@ -181,6 +187,7 @@
     </Compile>
     <Compile Include="Default.Master.cs">
       <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
@@ -251,6 +258,7 @@
     </Compile>
     <Compile Include="student\student.Master.cs">
       <DependentUpon>student.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="student\student.Master.designer.cs">
       <DependentUpon>student.Master</DependentUpon>
@@ -269,7 +277,10 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Uploads\ComLogos\" />
+    <Folder Include="Uploads\Resumes\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
