@@ -92,6 +92,7 @@
     <Content Include="js\script.js" />
     <Content Include="js\validation.js" />
     <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="register.aspx" />
     <Content Include="student\my-applications.aspx" />
     <Content Include="student\recommendation.aspx" />
@@ -212,6 +213,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register.aspx.cs">

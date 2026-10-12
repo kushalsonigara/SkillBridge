@@ -57,12 +57,58 @@
                                         <a class="nav-link nav-link-custom" href="contact.aspx">Contact</a>
                                     </li>
                                 </ul>
+
                                 <div class="header-actions">
                                     <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
                                         <i class="fa-solid fa-moon"></i>
                                     </button>
-                                    <a href="login.aspx" class="btn btn-outline-primary btn-nav">Log In</a>
-                                    <a href="register.aspx" class="btn btn-primary btn-nav shadow-sm">Register</a>
+
+                                    <!-- Show these buttons when logged out -->
+                                    <asp:PlaceHolder ID="phGuest" runat="server">
+                                        <a href="<%= ResolveUrl("~/login.aspx") %>"
+                                            class="btn btn-outline-primary btn-nav">Log In</a>
+
+                                        <a href="<%= ResolveUrl("~/register.aspx") %>"
+                                            class="btn btn-primary btn-nav shadow-sm">Register</a>
+                                    </asp:PlaceHolder>
+
+                                    <!-- Show this dropdown when logged in -->
+                                    <asp:PlaceHolder ID="phLoggedIn" runat="server" Visible="false">
+                                        <div class="dropdown d-inline-block">
+                                            <button class="btn btn-primary btn-nav dropdown-toggle"
+                                                type="button"
+                                                data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <i class="fa-solid fa-user me-2"></i>Profile
+                                            </button>
+
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li>
+                                                    <asp:Label ID="lblUserEmail" runat="server"
+                                                        CssClass="dropdown-item-text fw-semibold" />
+                                                </li>
+                                                <li>
+                                                    <asp:Label ID="lblUserRole" runat="server"
+                                                        CssClass="dropdown-item-text text-muted" />
+                                                </li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <asp:HyperLink ID="lnkDashboard" runat="server"
+                                                        CssClass="dropdown-item" Text="My Dashboard" />
+                                                </li>
+
+                                                <li>
+                                                    <a class="dropdown-item text-danger"
+                                                        href="<%= ResolveUrl("~/logout.aspx") %>">
+                                                        <i class="fa-solid fa-right-from-bracket me-2"></i>Logout
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </asp:PlaceHolder>
                                 </div>
                             </div>
                         </div>
