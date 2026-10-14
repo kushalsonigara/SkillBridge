@@ -22,33 +22,40 @@
                             <h4 class="fw-bold text-secondary mb-1">Send a Message</h4>
                             <p class="text-muted fs-7 mb-4">Have inquiries? Submit the contact form below and our staff will respond within 24 hours.</p>
 
-                            <form class="needs-validation-custom" data-success-msg="Message successfully sent! We will contact you soon." data-redirect="contact.aspx" novalidate>
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label for="contact-name" class="form-label form-label-custom">Your Name</label>
-                                        <input type="text" id="contact-name" class="form-control form-control-custom" placeholder="e.g. Jane Smith" required>
-                                        <div class="invalid-feedback-custom">Name is required.</div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="contact-email" class="form-label form-label-custom">Email Address</label>
-                                        <input type="email" id="contact-email" class="form-control form-control-custom" placeholder="e.g. jane@example.com" required>
-                                        <div class="invalid-feedback-custom">Please enter a valid email.</div>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="contact-subject" class="form-label form-label-custom">Subject</label>
-                                        <input type="text" id="contact-subject" class="form-control form-control-custom" placeholder="e.g. Partnership Request, Portal Bug Report" required>
-                                        <div class="invalid-feedback-custom">Subject is required.</div>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="contact-message" class="form-label form-label-custom">Message</label>
-                                        <textarea id="contact-message" class="form-control form-control-custom" rows="5" placeholder="Write your comments in detail..." required></textarea>
-                                        <div class="invalid-feedback-custom">Message body cannot be empty.</div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button type="submit" class="btn btn-primary w-100 py-2"><i class="fa-solid fa-paper-plane me-2"></i>Send Message</button>
-                                    </div>
+                            <%--                            <form class="needs-validation-custom" data-success-msg="Message successfully sent! We will contact you soon." data-redirect="contact.aspx" novalidate>--%>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="contact-name" class="form-label form-label-custom">Your Name</label>
+                                    <asp:TextBox ID="contactname" runat="server" CssClass="form-control form-control-custom" placeholder="e.g. Jane Smith" MaxLength="100"> </asp:TextBox>
+                                    <%--                                        <input type="text" id="contact-name" class="form-control form-control-custom" placeholder="e.g. Jane Smith" required>--%>
+                                    <div class="invalid-feedback-custom">Name is required.</div>
                                 </div>
-                            </form>
+                                <div class="col-md-6">
+                                    <label for="contact-email" class="form-label form-label-custom">Email Address</label>
+                                    <asp:TextBox ID="contactemail" runat="server" TextMode="Email" CssClass="form-control form-control-custom" placeholder="e.g. jane@example.com" MaxLength="150">  </asp:TextBox>
+                                    <%--                                    <input type="email" id="contact-email" class="form-control form-control-custom" placeholder="e.g. jane@example.com" required>--%>
+                                    <div class="invalid-feedback-custom">Please enter a valid email.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="contact-subject" class="form-label form-label-custom">Subject</label>
+                                    <asp:TextBox ID="contactsubject" runat="server" CssClass="form-control form-control-custom" placeholder="e.g. Partnership Request, Portal Bug Report" MaxLength="200"></asp:TextBox>
+                                    <%--                                    <input type="text" id="contact-subject" class="form-control form-control-custom" placeholder="e.g. Partnership Request, Portal Bug Report" required>--%>
+                                    <div class="invalid-feedback-custom">Subject is required.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="contact-message" class="form-label form-label-custom">Message</label>
+                                    <asp:TextBox ID="contactmessage" runat="server" TextMode="MultiLine" Rows="5" CssClass="form-control form-control-custom" placeholder="Write your comments in detail.">  </asp:TextBox>
+                                    <%--                                    <textarea id="contact-message" class="form-control form-control-custom" rows="5" placeholder="Write your comments in detail..." required></textarea>--%>
+                                    <div class="invalid-feedback-custom">Message body cannot be empty.</div>
+                                </div>
+                                <div class="col-12">
+                                    <asp:Button ID="btnSendMessage" runat="server"  Text="Send Message"  CssClass="btn btn-primary w-100 py-2"  OnClick="btnSendMessage_Click" />
+
+                                    <asp:Label ID="lblContactResult" runat="server"  CssClass="d-block mt-3">  </asp:Label>
+                                    <%--                                    <button type="submit" class="btn btn-primary w-100 py-2"><i class="fa-solid fa-paper-plane me-2"></i>Send Message</button>--%>
+                                </div>
+                            </div>
+                            <%--</form>--%>
                         </div>
                     </div>
 
@@ -65,8 +72,10 @@
                                     </div>
                                     <div>
                                         <h6 class="fw-bold mb-1">Corporate HQ</h6>
-                                        <p class="text-muted fs-7 mb-0">120 University Avenue, Suite 300,<br>
-                                            Palo Alto, CA 94301</p>
+                                        <p class="text-muted fs-7 mb-0">
+                                            120 University Avenue, Suite 300,<br>
+                                            Palo Alto, CA 94301
+                                        </p>
                                     </div>
                                 </div>
 
@@ -77,8 +86,10 @@
                                     </div>
                                     <div>
                                         <h6 class="fw-bold mb-1">Office Phone</h6>
-                                        <p class="text-muted fs-7 mb-0">+1 (650) 555-0199<br>
-                                            Monday to Friday, 9am - 5pm PST</p>
+                                        <p class="text-muted fs-7 mb-0">
+                                            +1 (650) 555-0199<br>
+                                            Monday to Friday, 9am - 5pm PST
+                                        </p>
                                     </div>
                                 </div>
 
@@ -89,8 +100,10 @@
                                     </div>
                                     <div>
                                         <h6 class="fw-bold mb-1">Support Email</h6>
-                                        <p class="text-muted fs-7 mb-0">support@skillbridge.com<br>
-                                            info@skillbridge.com</p>
+                                        <p class="text-muted fs-7 mb-0">
+                                            support@skillbridge.com<br>
+                                            info@skillbridge.com
+                                        </p>
                                     </div>
                                 </div>
                             </div>
