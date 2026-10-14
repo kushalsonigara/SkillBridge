@@ -11,7 +11,8 @@ namespace SkillBridge.company
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!SkillBridge.LoginSecurity.CheckRole(this, "Company"))
+                return;
         }
     }
 }

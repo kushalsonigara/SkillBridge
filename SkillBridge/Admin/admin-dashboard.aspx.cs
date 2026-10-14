@@ -11,7 +11,8 @@ namespace SkillBridge.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!SkillBridge.LoginSecurity.CheckRole(this, "Admin"))
+                return;
         }
     }
 }
