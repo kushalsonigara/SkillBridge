@@ -282,7 +282,7 @@
                                             </asp:HyperLink>
 
                                             <asp:HyperLink ID="lnkApply" runat="server"
-                                                NavigateUrl='<%# "~/apply-internship.aspx?InternshipID=" + Eval("InternshipID") %>'
+                                                NavigateUrl='<%# "~/student/apply-internship.aspx?InternshipID=" + Eval("InternshipID") %>'
                                                 CssClass="btn btn-primary btn-sm px-4 rounded-3 shadow-sm fs-8 py-2">
                                                 Apply Now
                                             </asp:HyperLink>

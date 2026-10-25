@@ -127,12 +127,22 @@ namespace SkillBridge
             }
         }
 
+
         void RedirectByRole(string role)
         {
             if (role == "Student")
             {
-                Response.Redirect(
-                    "~/student/student-dashboard.aspx", false);
+                if (Request.QueryString["ReturnUrl"] != null &&
+                    Request.QueryString["ReturnUrl"] != "")
+                {
+                    Response.Redirect(
+                        Request.QueryString["ReturnUrl"], false);
+                }
+                else
+                {
+                    Response.Redirect(
+                        "~/student/student-dashboard.aspx", false);
+                }
             }
             else if (role == "Company")
             {
@@ -152,6 +162,7 @@ namespace SkillBridge
 
             Context.ApplicationInstance.CompleteRequest();
         }
+
 
     }
 }

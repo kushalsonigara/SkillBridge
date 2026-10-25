@@ -95,6 +95,7 @@
     <Content Include="login.aspx" />
     <Content Include="logout.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="student\apply-internship.aspx" />
     <Content Include="student\my-applications.aspx" />
     <Content Include="student\recommendation.aspx" />
     <Content Include="student\student-dashboard.aspx" />
@@ -237,6 +238,13 @@
     </Compile>
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student\apply-internship.aspx.cs">
+      <DependentUpon>apply-internship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student\apply-internship.aspx.designer.cs">
+      <DependentUpon>apply-internship.aspx</DependentUpon>
     </Compile>
     <Compile Include="student\my-applications.aspx.cs">
       <DependentUpon>my-applications.aspx</DependentUpon>
