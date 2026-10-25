@@ -87,6 +87,7 @@
     <Content Include="css\style.css" />
     <Content Include="css\tables.css" />
     <Content Include="index.aspx" />
+    <Content Include="internship-details.aspx" />
     <Content Include="internship-list.aspx" />
     <Content Include="js\dashboard.js" />
     <Content Include="js\script.js" />
@@ -199,6 +200,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="internship-details.aspx.cs">
+      <DependentUpon>internship-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="internship-details.aspx.designer.cs">
+      <DependentUpon>internship-details.aspx</DependentUpon>
     </Compile>
     <Compile Include="internship-list.aspx.cs">
       <DependentUpon>internship-list.aspx</DependentUpon>
