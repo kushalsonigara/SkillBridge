@@ -3,100 +3,142 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder2">
-    <!-- Dashboard Inner Panel -->
     <div class="dashboard-inner">
 
         <!-- Breadcrumb Navigation -->
         <nav aria-label="breadcrumb" class="breadcrumb-custom">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item breadcrumb-item-custom"><a href="company-dashboard.aspx">Dashboard</a></li>
-                <li class="breadcrumb-item breadcrumb-item-custom active" aria-current="page">Manage Internships</li>
+                <li class="breadcrumb-item breadcrumb-item-custom">
+                    <a href="company-dashboard.aspx">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item breadcrumb-item-custom active" aria-current="page">Manage Internships
+                </li>
             </ol>
         </nav>
 
+        <!-- Page Heading -->
         <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
             <div>
                 <h2 class="fw-bold text-secondary mb-1">Manage Posted Opportunities</h2>
                 <p class="text-muted mb-0">Review metrics, edit descriptions, or remove active listings</p>
             </div>
-            <a href="add-internship.aspx" class="btn btn-primary"><i class="fa-solid fa-circle-plus me-2"></i>Post New Opportunity</a>
+
+            <a href="add-internship.aspx" class="btn btn-primary">
+                <i class="fa-solid fa-circle-plus me-2"></i>Post New Opportunity
+            </a>
         </div>
 
-        <!-- Table Toolbar -->
+        <!-- Search Toolbar -->
+
+        <%-- Original HTML search input replaced with ASP.NET TextBox --%>
+        <%--
+        <input type="text" class="form-control form-control-custom"
+               placeholder="Search internships...">
+        --%>
+
         <div class="table-toolbar">
             <div class="input-group max-width-350">
-                <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
-                <input type="text" class="form-control form-control-custom border-start-0 ps-1 fs-8" placeholder="Search internships...">
+                <span class="input-group-text bg-white border-end-0">
+                    <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                </span>
+
+                <asp:TextBox ID="txtSearch" runat="server"
+                    CssClass="form-control form-control-custom border-start-0 ps-1 fs-8"
+                    placeholder="Search internships..."
+                    AutoPostBack="true"
+                    OnTextChanged="txtSearch_TextChanged">
+                </asp:TextBox>
             </div>
         </div>
 
-        <!-- Internship Listings Table -->
+        <asp:Label ID="lblMessage" runat="server" CssClass="d-block mb-3"></asp:Label>
+
+        <!-- Internship GridView -->
         <div class="table-responsive-custom">
-            <table class="table-custom">
-                <thead>
-                    <tr>
-                        <th>Internship Title</th>
-                        <th>Location</th>
-                        <th>Stipend</th>
-                        <th>Duration</th>
-                        <th>Applicants</th>
-                        <th class="text-end">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <strong class="text-secondary d-block">Frontend Developer Intern</strong>
-                            <span class="text-muted fs-8">Posted Aug 1, 2026</span>
-                        </td>
-                        <td><span class="badge bg-light-primary text-primary px-2 py-1 fs-9 rounded-2">Remote</span></td>
-                        <td><strong class="text-dark">$1,200/mo</strong></td>
-                        <td>3 Months</td>
-                        <td>
-                            <span class="badge bg-light-info text-info px-2.5 py-1.5 fs-9 rounded-pill fw-bold"><i class="fa-solid fa-user-group me-1"></i>18 Applicants</span>
-                        </td>
-                        <td class="text-end">
-                            <a href="applicants.aspx" class="btn btn-light btn-sm text-primary fw-bold me-1" data-bs-toggle="tooltip" title="View Applicants"><i class="fa-solid fa-user-group"></i></a>
-                            <a href="add-internship.aspx?edit=true" class="btn btn-light btn-sm text-warning fw-bold me-1" data-bs-toggle="tooltip" title="Edit Listing"><i class="fa-solid fa-pen-to-square"></i></a>
-                            <a href="#" class="btn btn-light btn-sm text-danger fw-bold btn-delete-internship" data-bs-toggle="tooltip" title="Delete Listing"><i class="fa-solid fa-trash-can"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong class="text-secondary d-block">UI/UX Designer Intern</strong>
-                            <span class="text-muted fs-8">Posted Jul 25, 2026</span>
-                        </td>
-                        <td><span class="badge bg-light-primary text-primary px-2 py-1 fs-9 rounded-2">San Francisco</span></td>
-                        <td><strong class="text-dark">$1,400/mo</strong></td>
-                        <td>3 Months</td>
-                        <td>
-                            <span class="badge bg-light-info text-info px-2.5 py-1.5 fs-9 rounded-pill fw-bold"><i class="fa-solid fa-user-group me-1"></i>12 Applicants</span>
-                        </td>
-                        <td class="text-end">
-                            <a href="applicants.aspx" class="btn btn-light btn-sm text-primary fw-bold me-1" data-bs-toggle="tooltip" title="View Applicants"><i class="fa-solid fa-user-group"></i></a>
-                            <a href="add-internship.aspx?edit=true" class="btn btn-light btn-sm text-warning fw-bold me-1" data-bs-toggle="tooltip" title="Edit Listing"><i class="fa-solid fa-pen-to-square"></i></a>
-                            <a href="#" class="btn btn-light btn-sm text-danger fw-bold btn-delete-internship" data-bs-toggle="tooltip" title="Delete Listing"><i class="fa-solid fa-trash-can"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong class="text-secondary d-block">Digital Marketing Intern</strong>
-                            <span class="text-muted fs-8">Posted Jul 20, 2026</span>
-                        </td>
-                        <td><span class="badge bg-light-primary text-primary px-2 py-1 fs-9 rounded-2">Remote</span></td>
-                        <td><strong class="text-dark">$1,000/mo</strong></td>
-                        <td>3 Months</td>
-                        <td>
-                            <span class="badge bg-light-info text-info px-2.5 py-1.5 fs-9 rounded-pill fw-bold"><i class="fa-solid fa-user-group me-1"></i>15 Applicants</span>
-                        </td>
-                        <td class="text-end">
-                            <a href="applicants.aspx" class="btn btn-light btn-sm text-primary fw-bold me-1" data-bs-toggle="tooltip" title="View Applicants"><i class="fa-solid fa-user-group"></i></a>
-                            <a href="add-internship.aspx?edit=true" class="btn btn-light btn-sm text-warning fw-bold me-1" data-bs-toggle="tooltip" title="Edit Listing"><i class="fa-solid fa-pen-to-square"></i></a>
-                            <a href="#" class="btn btn-light btn-sm text-danger fw-bold btn-delete-internship" data-bs-toggle="tooltip" title="Delete Listing"><i class="fa-solid fa-trash-can"></i></a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <asp:GridView ID="gvInternships" runat="server"
+                AutoGenerateColumns="False"
+                CssClass="table-custom"
+                GridLines="None"
+                Width="100%"
+                DataKeyNames="InternshipID"
+                EmptyDataText="No internships found."
+                OnRowCommand="gvInternships_RowCommand">
+
+                <Columns>
+
+                    <asp:TemplateField HeaderText="Internship Title">
+                        <ItemTemplate>
+                            <strong class="text-secondary d-block">
+                                <%# Eval("Title") %>
+                            </strong>
+                            <span class="text-muted fs-8">Posted <%# Eval("CreatedAt", "{0:dd MMM yyyy}") %>
+                            </span>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Location">
+                        <ItemTemplate>
+                            <span class="badge bg-light-primary text-primary px-2 py-1 fs-9 rounded-2">
+                                <%# Eval("Location") %>
+                            </span>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Stipend">
+                        <ItemTemplate>
+                            <strong class="text-dark">
+                                <%# Eval("Stipend", "{0:N2}") %>
+                            </strong>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:BoundField DataField="Duration" HeaderText="Duration" />
+
+                    <asp:TemplateField HeaderText="Applicants">
+                        <ItemTemplate>
+                            <span class="badge bg-light-info text-info px-2 py-1 fs-9 rounded-pill fw-bold">
+                                <i class="fa-solid fa-user-group me-1"></i>
+                                <%# Eval("Applicants") %> Applicants
+                            </span>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Actions">
+                        <ItemStyle HorizontalAlign="Right" />
+
+                        <ItemTemplate>
+
+                            <asp:HyperLink ID="lnkApplicants" runat="server"
+                                NavigateUrl='<%# "applicants.aspx?InternshipID=" + Eval("InternshipID") %>'
+                                CssClass="btn btn-light btn-sm text-primary fw-bold me-1"
+                                ToolTip="View Applicants">
+                                <i class="fa-solid fa-user-group"></i>
+                            </asp:HyperLink>
+
+                            <asp:HyperLink ID="lnkEdit" runat="server"
+                                NavigateUrl='<%# "add-internship.aspx?edit=true&InternshipID=" + Eval("InternshipID") %>'
+                                CssClass="btn btn-light btn-sm text-warning fw-bold me-1"
+                                ToolTip="Edit Listing">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </asp:HyperLink>
+
+                            <asp:LinkButton ID="btnDelete" runat="server"
+                                CommandName="DeleteInternship"
+                                CommandArgument='<%# Eval("InternshipID") %>'
+                                OnClientClick="return confirm('Are you sure you want to delete this internship?');"
+                                CssClass="btn btn-light btn-sm text-danger fw-bold"
+                                ToolTip="Delete Listing">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </asp:LinkButton>
+
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                </Columns>
+
+            </asp:GridView>
+
         </div>
 
     </div>
