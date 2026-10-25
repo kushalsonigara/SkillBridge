@@ -51,7 +51,7 @@
                             <a href="my-applications.aspx" class="sidebar-link">
                                 <i class="fa-solid fa-folder-open"></i>My Applications
                             </a>
-                            <a href="track-application.aspx" class="sidebar-link">
+                            <a href="my-applications.aspx" class="sidebar-link">
                                 <i class="fa-solid fa-route"></i>Track Application
                             </a>
 
@@ -171,7 +171,7 @@
                                 <a href="../internship-list.aspx" class="footer-link">Browse Internships</a>
                                 <a href="recommendation.aspx" class="footer-link">Recommendations</a>
                                 <a href="my-applications.aspx" class="footer-link">My Applications</a>
-                                <a href="track-application.aspx" class="footer-link">Track Application</a>
+                                <a href="my-applications.aspx" class="footer-link">Track Application</a>
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <h5>Support</h5>
