@@ -29,6 +29,16 @@ namespace SkillBridge
         {
             if (!IsPostBack)
             {
+                if (Request.QueryString["search"] != null)
+                {
+                    txtKeyword.Text = Request.QueryString["search"];
+                }
+
+                if (Request.QueryString["location"] != null)
+                {
+                    ddlLocation.SelectedValue = Request.QueryString["location"];
+                }
+
                 filldatalist();
             }
         }
@@ -37,14 +47,41 @@ namespace SkillBridge
         {
             getCon();
 
-            da = new SqlDataAdapter(
-                "SELECT I.InternshipID, I.Title, I.Description, I.RequiredSkills, " +
-                "I.Location, I.Stipend, I.Duration, I.Deadline, C.CompanyName " +
+            string query = "SELECT I.InternshipID, I.Title, I.Description, I.RequiredSkills, " +
+                "I.Location, I.Stipend, I.Duration, I.Deadline, I.Department, C.CompanyName " +
                 "FROM Internships I " +
                 "INNER JOIN Companies C ON I.CompanyID = C.CompanyID " +
-                "WHERE I.Deadline IS NULL OR I.Deadline >= CAST(GETDATE() AS date) " +
-                "ORDER BY I.CreatedAt DESC", con);
+                "WHERE (I.Deadline IS NULL OR I.Deadline >= CAST(GETDATE() AS date))";
 
+            if (Request.QueryString["search"] != null &&
+                Request.QueryString["search"].Trim() != "")
+            {
+                string search = Request.QueryString["search"].Trim();
+
+                query += " AND (I.Title LIKE '%" + search + "%' " +
+                    "OR I.RequiredSkills LIKE '%" + search + "%' " +
+                    "OR I.Department LIKE '%" + search + "%')";
+            }
+
+            if (Request.QueryString["category"] != null &&
+                Request.QueryString["category"].Trim() != "")
+            {
+                string category = Request.QueryString["category"].Trim();
+
+                query += " AND I.Department LIKE '%" + category + "%'";
+            }
+
+            if (Request.QueryString["location"] != null &&
+                Request.QueryString["location"].Trim() != "")
+            {
+                string location = Request.QueryString["location"].Trim();
+
+                query += " AND I.Location = '" + location + "'";
+            }
+
+            query += " ORDER BY I.CreatedAt DESC";
+
+            da = new SqlDataAdapter(query, con);
             ds = new DataSet();
             da.Fill(ds);
 
@@ -70,14 +107,23 @@ namespace SkillBridge
             getCon();
 
             string query = "SELECT I.InternshipID, I.Title, I.Description, I.RequiredSkills, " +
-                "I.Location, I.Stipend, I.Duration, I.Deadline, C.CompanyName " +
+                "I.Location, I.Stipend, I.Duration, I.Deadline, I.Department, C.CompanyName " +
                 "FROM Internships I " +
                 "INNER JOIN Companies C ON I.CompanyID = C.CompanyID " +
                 "WHERE (I.Deadline IS NULL OR I.Deadline >= CAST(GETDATE() AS date))";
 
             if (txtKeyword.Text != "")
             {
-                query += " AND (I.Title LIKE '%" + txtKeyword.Text + "%' OR I.RequiredSkills LIKE '%" + txtKeyword.Text + "%')";
+                query += " AND (I.Title LIKE '%" + txtKeyword.Text + "%' " +
+                    "OR I.RequiredSkills LIKE '%" + txtKeyword.Text + "%' " +
+                    "OR I.Department LIKE '%" + txtKeyword.Text + "%')";
+            }
+
+            if (Request.QueryString["category"] != null &&
+                Request.QueryString["category"].Trim() != "")
+            {
+                query += " AND I.Department LIKE '%" +
+                    Request.QueryString["category"].Trim() + "%'";
             }
 
             if (ddlLocation.SelectedValue != "")
@@ -115,10 +161,39 @@ namespace SkillBridge
             getCon();
 
             string query = "SELECT I.InternshipID, I.Title, I.Description, I.RequiredSkills, " +
-                "I.Location, I.Stipend, I.Duration, I.Deadline, C.CompanyName " +
+                "I.Location, I.Stipend, I.Duration, I.Deadline, I.Department, C.CompanyName " +
                 "FROM Internships I " +
                 "INNER JOIN Companies C ON I.CompanyID = C.CompanyID " +
-                "WHERE I.Deadline IS NULL OR I.Deadline >= CAST(GETDATE() AS date) ";
+                "WHERE (I.Deadline IS NULL OR I.Deadline >= CAST(GETDATE() AS date))";
+
+            if (txtKeyword.Text != "")
+            {
+                query += " AND (I.Title LIKE '%" + txtKeyword.Text + "%' " +
+                    "OR I.RequiredSkills LIKE '%" + txtKeyword.Text + "%' " +
+                    "OR I.Department LIKE '%" + txtKeyword.Text + "%')";
+            }
+
+            if (Request.QueryString["category"] != null &&
+                Request.QueryString["category"].Trim() != "")
+            {
+                query += " AND I.Department LIKE '%" +
+                    Request.QueryString["category"].Trim() + "%'";
+            }
+
+            if (ddlLocation.SelectedValue != "")
+            {
+                query += " AND I.Location = '" + ddlLocation.SelectedValue + "'";
+            }
+
+            if (ddlDuration.SelectedValue != "")
+            {
+                query += " AND I.Duration = '" + ddlDuration.SelectedValue + "'";
+            }
+
+            if (txtCompany.Text != "")
+            {
+                query += " AND C.CompanyName LIKE '%" + txtCompany.Text + "%'";
+            }
 
             if (ddlSort.SelectedValue == "stipend")
             {

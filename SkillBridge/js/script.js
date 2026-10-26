@@ -231,51 +231,62 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // C. Numeric Count-up Counter Animations
-  const statNumbers = document.querySelectorAll('.stat-number');
-  if (statNumbers.length > 0) {
-    const animateCounter = (el) => {
-      const target = parseFloat(el.getAttribute('data-target'));
-      const prefix = el.getAttribute('data-prefix') || '';
-      const suffix = el.getAttribute('data-suffix') || '';
-      const decimals = parseInt(el.getAttribute('data-decimals')) || 0;
-      
-      const duration = 2000; // 2 seconds
-      const startTime = performance.now();
-      
-      const updateNumber = (currentTime) => {
-        const elapsedTime = currentTime - startTime;
-        const progress = Math.min(elapsedTime / duration, 1);
-        
-        // Easing function (outQuad)
-        const easedProgress = progress * (2 - progress);
-        const currentValue = easedProgress * target;
-        
-        el.textContent = prefix + currentValue.toFixed(decimals) + suffix;
-        
-        if (progress < 1) {
-          requestAnimationFrame(updateNumber);
-        }
-      };
-      
-      requestAnimationFrame(updateNumber);
-    };
 
-    const counterObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCounter(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.5
-    });
+    // C. Numeric Count-up Counter Animations
+    const statNumbers = document.querySelectorAll('.stat-number');
 
-    statNumbers.forEach(number => {
-      counterObserver.observe(number);
-    });
-  }
+    if (statNumbers.length > 0) {
+        const animateCounter = (el) => {
+            const label = el.querySelector('span');
+            const displayedValue = label ? label.textContent.trim() : el.textContent.trim();
+            const targetValue = el.getAttribute('data-target');
+
+            const target = targetValue !== null && targetValue.trim() !== ''
+                ? Number(targetValue)
+                : Number(displayedValue);
+
+            if (!Number.isFinite(target)) {
+                console.error('Invalid statistic value:', el, displayedValue, targetValue);
+                return;
+            }
+
+            const prefix = el.getAttribute('data-prefix') || '';
+            const suffix = el.getAttribute('data-suffix') || '';
+            const decimals = parseInt(el.getAttribute('data-decimals')) || 0;
+            const duration = 2000;
+            const startTime = performance.now();
+
+            const updateNumber = (currentTime) => {
+                const progress = Math.min((currentTime - startTime) / duration, 1);
+                const easedProgress = progress * (2 - progress);
+                const currentValue = easedProgress * target;
+
+                el.textContent = prefix + currentValue.toFixed(decimals) + suffix;
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateNumber);
+                }
+            };
+
+            requestAnimationFrame(updateNumber);
+        };
+
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        statNumbers.forEach(number => {
+            counterObserver.observe(number);
+        });
+    }
+
 
   // D. Interactive Category Pill Filters for Internship Listings
   const filterPills = document.querySelectorAll('.btn-filter');

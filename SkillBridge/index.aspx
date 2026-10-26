@@ -104,8 +104,8 @@
                             <div class="stat-icon-wrapper">
                                 <i class="fa-solid fa-briefcase"></i>
                             </div>
-                            <h2 class="fw-extrabold text-secondary stat-number" data-target="1250" data-suffix="+">1,250+</h2>
-                            <p class="text-muted mb-0 font-weight-500">Active Internships</p>
+                            <h2 class="fw-extrabold text-secondary stat-number"><asp:Label ID="lblInternshipCount" runat="server" Text="0" /></h2>
+                            <p class="text-muted mb-0 font-weight-500">Total Internships</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
@@ -113,7 +113,7 @@
                             <div class="stat-icon-wrapper" style="background-color: rgba(5, 150, 105, 0.08); color: var(--success);">
                                 <i class="fa-solid fa-building"></i>
                             </div>
-                            <h2 class="fw-extrabold text-secondary stat-number" data-target="320" data-suffix="+">320+</h2>
+                            <h2 class="fw-extrabold text-secondary stat-number"><asp:Label ID="lblCompanyCount" runat="server" Text="0" /></h2>
                             <p class="text-muted mb-0 font-weight-500">Partner Companies</p>
                         </div>
                     </div>
@@ -122,8 +122,8 @@
                             <div class="stat-icon-wrapper" style="background-color: rgba(56, 189, 248, 0.12); color: #0284C7;">
                                 <i class="fa-solid fa-user-graduate"></i>
                             </div>
-                            <h2 class="fw-extrabold text-secondary stat-number" data-target="4800" data-suffix="+">4,800+</h2>
-                            <p class="text-muted mb-0 font-weight-500">Placed Students</p>
+                            <h2 class="fw-extrabold text-secondary stat-number"><asp:Label ID="lblStudentCount" runat="server" Text="0" /></h2>
+                            <p class="text-muted mb-0 font-weight-500">Active Students</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
@@ -131,8 +131,8 @@
                             <div class="stat-icon-wrapper" style="background-color: rgba(217, 119, 6, 0.08); color: var(--warning);">
                                 <i class="fa-solid fa-hand-holding-dollar"></i>
                             </div>
-                            <h2 class="fw-extrabold text-secondary stat-number" data-target="1.5" data-decimals="1" data-prefix="$" data-suffix="k">$1.5k</h2>
-                            <p class="text-muted mb-0 font-weight-500">Avg. Stipend / Month</p>
+                            <h2 class="fw-extrabold text-secondary stat-number"><asp:Label ID="lblApplicationCount" runat="server" Text="0" /></h2>
+                            <p class="text-muted mb-0 font-weight-500">Total Applications</p>
                         </div>
                     </div>
                 </div>
@@ -189,74 +189,74 @@
                 <div class="row g-4">
                     <!-- Category 1 -->
                     <div class="col-lg-4 col-md-6">
-                        <a href="internship-list.aspx?search=Development" class="category-card">
+                        <asp:HyperLink ID="lnkDevelopment" runat="server" NavigateUrl="~/internship-list.aspx?search=Development" CssClass="category-card">
                             <div class="category-icon-box bg-light-primary text-primary">
                                 <i class="fa-solid fa-laptop-code"></i>
                             </div>
                             <h5 class="fw-bold text-secondary mb-1">Software & Engineering</h5>
                             <p class="text-muted fs-8 mb-3">Frontend, Backend, Mobile Apps, Cloud & Full Stack</p>
                             <span class="category-count"><i class="fa-solid fa-circle-dot text-success me-1"></i>340+ Open Positions</span>
-                        </a>
+                        </asp:HyperLink>
                     </div>
 
                     <!-- Category 2 -->
                     <div class="col-lg-4 col-md-6">
-                        <a href="internship-list.aspx?search=Design" class="category-card">
+                        <asp:HyperLink ID="lnkDesign" runat="server" NavigateUrl="~/internship-list.aspx?search=Design" CssClass="category-card">
                             <div class="category-icon-box bg-light-success text-success">
                                 <i class="fa-solid fa-palette"></i>
                             </div>
                             <h5 class="fw-bold text-secondary mb-1">UI/UX & Product Design</h5>
                             <p class="text-muted fs-8 mb-3">Figma, Wireframing, User Research & Prototyping</p>
                             <span class="category-count"><i class="fa-solid fa-circle-dot text-success me-1"></i>180+ Open Positions</span>
-                        </a>
+                        </asp:HyperLink>
                     </div>
 
                     <!-- Category 3 -->
                     <div class="col-lg-4 col-md-6">
-                        <a href="internship-list.aspx?search=Data" class="category-card">
+                        <asp:HyperLink ID="lnkData" runat="server" NavigateUrl="~/internship-list.aspx?search=Data" CssClass="category-card">
                             <div class="category-icon-box bg-light-info text-info">
                                 <i class="fa-solid fa-brain"></i>
                             </div>
                             <h5 class="fw-bold text-secondary mb-1">Data Science & AI</h5>
                             <p class="text-muted fs-8 mb-3">Machine Learning, Python, Analytics & Business Intelligence</p>
                             <span class="category-count"><i class="fa-solid fa-circle-dot text-success me-1"></i>140+ Open Positions</span>
-                        </a>
+                        </asp:HyperLink>
                     </div>
 
                     <!-- Category 4 -->
                     <div class="col-lg-4 col-md-6">
-                        <a href="internship-list.aspx?search=Marketing" class="category-card">
+                        <asp:HyperLink ID="lnkMarketing" runat="server" NavigateUrl="~/internship-list.aspx?search=Marketing" CssClass="category-card">
                             <div class="category-icon-box bg-light-warning text-warning">
                                 <i class="fa-solid fa-chart-line"></i>
                             </div>
                             <h5 class="fw-bold text-secondary mb-1">Digital Marketing & Growth</h5>
                             <p class="text-muted fs-8 mb-3">SEO, Social Media, Content Strategy & Performance Ads</p>
                             <span class="category-count"><i class="fa-solid fa-circle-dot text-success me-1"></i>120+ Open Positions</span>
-                        </a>
+                        </asp:HyperLink>
                     </div>
 
                     <!-- Category 5 -->
                     <div class="col-lg-4 col-md-6">
-                        <a href="internship-list.aspx?search=Finance" class="category-card">
+                        <asp:HyperLink ID="lnkFinance" runat="server" NavigateUrl="~/internship-list.aspx?search=Finance" CssClass="category-card">
                             <div class="category-icon-box bg-light-primary text-primary">
                                 <i class="fa-solid fa-building-columns"></i>
                             </div>
                             <h5 class="fw-bold text-secondary mb-1">Finance & Business Ops</h5>
                             <p class="text-muted fs-8 mb-3">Financial Modeling, Strategy, Auditing & Market Research</p>
                             <span class="category-count"><i class="fa-solid fa-circle-dot text-success me-1"></i>95+ Open Positions</span>
-                        </a>
+                        </asp:HyperLink>
                     </div>
 
                     <!-- Category 6 -->
                     <div class="col-lg-4 col-md-6">
-                        <a href="internship-list.aspx?search=HR" class="category-card">
+                        <asp:HyperLink ID="lnkHR" runat="server" NavigateUrl="~/internship-list.aspx?search=HR" CssClass="category-card">
                             <div class="category-icon-box bg-light-success text-success">
                                 <i class="fa-solid fa-users"></i>
                             </div>
                             <h5 class="fw-bold text-secondary mb-1">Human Resources & Talent</h5>
                             <p class="text-muted fs-8 mb-3">Recruiting, People Ops, Employee Engagement & Culture</p>
                             <span class="category-count"><i class="fa-solid fa-circle-dot text-success me-1"></i>75+ Open Positions</span>
-                        </a>
+                        </asp:HyperLink>
                     </div>
                 </div>
             </div>
@@ -275,193 +275,69 @@
 
                 <!-- Filter Category Pills -->
                 <div class="d-flex justify-content-start gap-2 mb-4 flex-wrap reveal">
-                    <button class="btn btn-filter active" data-filter="all">All Fields</button>
-                    <button class="btn btn-filter" data-filter="development"><i class="fa-solid fa-laptop-code me-2"></i>Development</button>
-                    <button class="btn btn-filter" data-filter="design"><i class="fa-solid fa-palette me-2"></i>Design</button>
-                    <button class="btn btn-filter" data-filter="marketing"><i class="fa-solid fa-chart-line me-2"></i>Marketing</button>
+                    <button type="button" class="btn btn-filter active" data-filter="all">All Fields</button>
+                    <button type="button" class="btn btn-filter" data-filter="development"><i class="fa-solid fa-laptop-code me-2"></i>Development</button>
+                    <button type="button" class="btn btn-filter" data-filter="design"><i class="fa-solid fa-palette me-2"></i>Design</button>
+                    <button type="button" class="btn btn-filter" data-filter="marketing"><i class="fa-solid fa-chart-line me-2"></i>Marketing</button>
                 </div>
 
                 <div class="row g-4" id="internship-list-row">
-                    <!-- Card 1 -->
-                    <div class="col-lg-4 col-md-6 col-filter-item development reveal">
-                        <div class="card-premium h-100 p-4 d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <span class="badge bg-light-primary text-primary px-3 py-1.5 rounded-3"><i class="fa-solid fa-laptop-code me-1"></i>Development</span>
-                                    <span class="text-muted fs-8 ms-2"><i class="fa-solid fa-clock me-1"></i>2 days ago</span>
-                                </div>
-                                <button type="button" class="btn-bookmark btn border-0 p-0" aria-label="Bookmark Internship">
-                                    <i class="fa-regular fa-bookmark fs-5"></i>
-                                </button>
-                            </div>
-                            <h5 class="card-title fw-bold mb-1"><a href="internship-list.aspx" class="text-secondary">Frontend Developer Intern</a></h5>
-                            <p class="text-primary fw-medium mb-3"><i class="fa-solid fa-building me-1"></i>TechSphere Solutions <i class="fa-solid fa-circle-check text-success ms-1 fs-9"></i></p>
-                            <p class="text-muted fs-8 mb-3">Join our engineering department to design UI components, integrate REST APIs, and build responsive web applications.</p>
-                            <div class="mb-4">
-                                <span class="badge-skill me-1 mb-1">HTML5</span>
-                                <span class="badge-skill me-1 mb-1">CSS3</span>
-                                <span class="badge-skill me-1 mb-1">JavaScript</span>
-                                <span class="badge-skill me-1 mb-1">Bootstrap</span>
-                            </div>
-                            <div class="border-top pt-3 mt-auto d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="d-block text-muted fs-9">STIPEND</span>
-                                    <span class="fw-bold text-secondary">$1,200/mo</span>
-                                </div>
-                                <a href="internship-list.aspx" class="btn btn-primary btn-sm px-3 rounded-2 shadow-sm">Apply Now</a>
-                            </div>
-                        </div>
-                    </div>
+                    <asp:DataList ID="dlInternships" runat="server"
+                        RepeatColumns="3"
+                        RepeatDirection="Horizontal"
+                        RepeatLayout="Flow"
+                        CssClass="w-100">
+                        <ItemTemplate>
+                            <div class="col-lg-4 col-md-6 col-filter-item reveal"
+                                data-department='<%# Eval("Department") %>'
+                                data-title='<%# Eval("Title") %>'
+                                data-skills='<%# Eval("RequiredSkills") %>'>
+                                <div class="card-premium h-100 p-4 d-flex flex-column">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <div>
+                                            <span class="badge bg-light-primary text-primary px-3 py-1.5 rounded-3">
+                                                <%# Eval("Department") %>
+                                            </span>
+                                            <span class="text-muted fs-8 ms-2">
+                                                <i class="fa-solid fa-clock me-1"></i>
+                                                <%# Eval("CreatedAt", "{0:dd MMM yyyy}") %>
+                                            </span>
+                                        </div>
+                                        <button type="button" class="btn-bookmark btn border-0 p-0" aria-label="Bookmark Internship">
+                                            <i class="fa-regular fa-bookmark fs-5"></i>
+                                        </button>
+                                    </div>
 
-                    <!-- Card 2 -->
-                    <div class="col-lg-4 col-md-6 col-filter-item design reveal">
-                        <div class="card-premium h-100 p-4 d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <span class="badge bg-light-success text-success px-3 py-1.5 rounded-3"><i class="fa-solid fa-palette me-1"></i>UI/UX Design</span>
-                                    <span class="text-muted fs-8 ms-2"><i class="fa-solid fa-clock me-1"></i>3 days ago</span>
-                                </div>
-                                <button type="button" class="btn-bookmark btn border-0 p-0" aria-label="Bookmark Internship">
-                                    <i class="fa-regular fa-bookmark fs-5"></i>
-                                </button>
-                            </div>
-                            <h5 class="card-title fw-bold mb-1"><a href="internship-list.aspx" class="text-secondary">UI/UX Designer Intern</a></h5>
-                            <p class="text-primary fw-medium mb-3"><i class="fa-solid fa-building me-1"></i>FigmaLab Studios <i class="fa-solid fa-circle-check text-success ms-1 fs-9"></i></p>
-                            <p class="text-muted fs-8 mb-3">Design interactive user flows, clickable Figma mockups, and conduct usability research for high-growth client products.</p>
-                            <div class="mb-4">
-                                <span class="badge-skill me-1 mb-1">Figma</span>
-                                <span class="badge-skill me-1 mb-1">Wireframing</span>
-                                <span class="badge-skill me-1 mb-1">User Research</span>
-                            </div>
-                            <div class="border-top pt-3 mt-auto d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="d-block text-muted fs-9">STIPEND</span>
-                                    <span class="fw-bold text-secondary">$1,400/mo</span>
-                                </div>
-                                <a href="internship-list.aspx" class="btn btn-primary btn-sm px-3 rounded-2 shadow-sm">Apply Now</a>
-                            </div>
-                        </div>
-                    </div>
+                                    <h5 class="card-title fw-bold mb-1">
+                                        <a href='<%# "internship-details.aspx?InternshipID=" + Eval("InternshipID") %>' class="text-secondary">
+                                            <%# Eval("Title") %>
+                                        </a>
+                                    </h5>
 
-                    <!-- Card 3 -->
-                    <div class="col-lg-4 col-md-6 col-filter-item marketing reveal">
-                        <div class="card-premium h-100 p-4 d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <span class="badge bg-light-warning text-warning px-3 py-1.5 rounded-3"><i class="fa-solid fa-chart-line me-1"></i>Marketing</span>
-                                    <span class="text-muted fs-8 ms-2"><i class="fa-solid fa-clock me-1"></i>4 days ago</span>
-                                </div>
-                                <button type="button" class="btn-bookmark btn border-0 p-0" aria-label="Bookmark Internship">
-                                    <i class="fa-regular fa-bookmark fs-5"></i>
-                                </button>
-                            </div>
-                            <h5 class="card-title fw-bold mb-1"><a href="internship-list.aspx" class="text-secondary">Digital Marketing Intern</a></h5>
-                            <p class="text-primary fw-medium mb-3"><i class="fa-solid fa-building me-1"></i>GrowthHack Inc. <i class="fa-solid fa-circle-check text-success ms-1 fs-9"></i></p>
-                            <p class="text-muted fs-8 mb-3">Execute growth experiments, analyze audience conversion funnels, and manage content distribution channels.</p>
-                            <div class="mb-4">
-                                <span class="badge-skill me-1 mb-1">SEO</span>
-                                <span class="badge-skill me-1 mb-1">Analytics</span>
-                                <span class="badge-skill me-1 mb-1">Copywriting</span>
-                            </div>
-                            <div class="border-top pt-3 mt-auto d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="d-block text-muted fs-9">STIPEND</span>
-                                    <span class="fw-bold text-secondary">$1,000/mo</span>
-                                </div>
-                                <a href="internship-list.aspx" class="btn btn-primary btn-sm px-3 rounded-2 shadow-sm">Apply Now</a>
-                            </div>
-                        </div>
-                    </div>
+                                    <p class="text-primary fw-medium mb-3">
+                                        <i class="fa-solid fa-building me-1"></i>
+                                        <%# Eval("CompanyName") %>
+                                        <i class="fa-solid fa-circle-check text-success ms-1 fs-9"></i>
+                                    </p>
 
-                    <!-- Card 4 -->
-                    <div class="col-lg-4 col-md-6 col-filter-item development reveal">
-                        <div class="card-premium h-100 p-4 d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <span class="badge bg-light-primary text-primary px-3 py-1.5 rounded-3"><i class="fa-solid fa-laptop-code me-1"></i>Development</span>
-                                    <span class="text-muted fs-8 ms-2"><i class="fa-solid fa-clock me-1"></i>1 day ago</span>
-                                </div>
-                                <button type="button" class="btn-bookmark btn border-0 p-0" aria-label="Bookmark Internship">
-                                    <i class="fa-regular fa-bookmark fs-5"></i>
-                                </button>
-                            </div>
-                            <h5 class="card-title fw-bold mb-1"><a href="internship-list.aspx" class="text-secondary">Software Engineering Intern</a></h5>
-                            <p class="text-primary fw-medium mb-3"><i class="fa-solid fa-building me-1"></i>Stripe Inc. <i class="fa-solid fa-circle-check text-success ms-1 fs-9"></i></p>
-                            <p class="text-muted fs-8 mb-3">Build backend services, assist in API integrations, and collaborate with experienced mentors on payment infrastructure.</p>
-                            <div class="mb-4">
-                                <span class="badge-skill me-1 mb-1">Python</span>
-                                <span class="badge-skill me-1 mb-1">SQL</span>
-                                <span class="badge-skill me-1 mb-1">REST APIs</span>
-                            </div>
-                            <div class="border-top pt-3 mt-auto d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="d-block text-muted fs-9">STIPEND</span>
-                                    <span class="fw-bold text-secondary">$1,500/mo</span>
-                                </div>
-                                <a href="internship-list.aspx" class="btn btn-primary btn-sm px-3 rounded-2 shadow-sm">Apply Now</a>
-                            </div>
-                        </div>
-                    </div>
+                                    <p class="text-muted fs-8 mb-3"><%# Eval("Description") %></p>
 
-                    <!-- Card 5 -->
-                    <div class="col-lg-4 col-md-6 col-filter-item design reveal">
-                        <div class="card-premium h-100 p-4 d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <span class="badge bg-light-success text-success px-3 py-1.5 rounded-3"><i class="fa-solid fa-palette me-1"></i>UI/UX Design</span>
-                                    <span class="text-muted fs-8 ms-2"><i class="fa-solid fa-clock me-1"></i>5 days ago</span>
-                                </div>
-                                <button type="button" class="btn-bookmark btn border-0 p-0" aria-label="Bookmark Internship">
-                                    <i class="fa-regular fa-bookmark fs-5"></i>
-                                </button>
-                            </div>
-                            <h5 class="card-title fw-bold mb-1"><a href="internship-list.aspx" class="text-secondary">Product Design Intern</a></h5>
-                            <p class="text-primary fw-medium mb-3"><i class="fa-solid fa-building me-1"></i>Spotify Labs <i class="fa-solid fa-circle-check text-success ms-1 fs-9"></i></p>
-                            <p class="text-muted fs-8 mb-3">Help create intuitive listening experiences, design component libraries, and build design systems with our product teams.</p>
-                            <div class="mb-4">
-                                <span class="badge-skill me-1 mb-1">Design Systems</span>
-                                <span class="badge-skill me-1 mb-1">Figma</span>
-                                <span class="badge-skill me-1 mb-1">Prototyping</span>
-                            </div>
-                            <div class="border-top pt-3 mt-auto d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="d-block text-muted fs-9">STIPEND</span>
-                                    <span class="fw-bold text-secondary">$1,350/mo</span>
-                                </div>
-                                <a href="internship-list.aspx" class="btn btn-primary btn-sm px-3 rounded-2 shadow-sm">Apply Now</a>
-                            </div>
-                        </div>
-                    </div>
+                                    <div class="mb-4">
+                                        <span class="badge-skill me-1 mb-1"><%# Eval("RequiredSkills") %></span>
+                                    </div>
 
-                    <!-- Card 6 -->
-                    <div class="col-lg-4 col-md-6 col-filter-item development reveal">
-                        <div class="card-premium h-100 p-4 d-flex flex-column">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <span class="badge bg-light-primary text-primary px-3 py-1.5 rounded-3"><i class="fa-solid fa-laptop-code me-1"></i>Development</span>
-                                    <span class="text-muted fs-8 ms-2"><i class="fa-solid fa-clock me-1"></i>Just Now</span>
+                                    <div class="border-top pt-3 mt-auto d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="d-block text-muted fs-9">STIPEND</span>
+                                            <span class="fw-bold text-secondary"><%# Eval("Stipend") %></span>
+                                        </div>
+                                        <a href='<%# "internship-details.aspx?InternshipID=" + Eval("InternshipID") %>'
+                                            class="btn btn-primary btn-sm px-3 rounded-2 shadow-sm">Apply Now</a>
+                                    </div>
                                 </div>
-                                <button type="button" class="btn-bookmark btn border-0 p-0" aria-label="Bookmark Internship">
-                                    <i class="fa-regular fa-bookmark fs-5"></i>
-                                </button>
                             </div>
-                            <h5 class="card-title fw-bold mb-1"><a href="internship-list.aspx" class="text-secondary">Full Stack React Intern</a></h5>
-                            <p class="text-primary fw-medium mb-3"><i class="fa-solid fa-building me-1"></i>CloudScale Systems <i class="fa-solid fa-circle-check text-success ms-1 fs-9"></i></p>
-                            <p class="text-muted fs-8 mb-3">Work with React, Node.js, and MongoDB to deliver real-time analytics dashboards for enterprise users.</p>
-                            <div class="mb-4">
-                                <span class="badge-skill me-1 mb-1">React</span>
-                                <span class="badge-skill me-1 mb-1">Node.js</span>
-                                <span class="badge-skill me-1 mb-1">TypeScript</span>
-                            </div>
-                            <div class="border-top pt-3 mt-auto d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="d-block text-muted fs-9">STIPEND</span>
-                                    <span class="fw-bold text-secondary">$1,600/mo</span>
-                                </div>
-                                <a href="internship-list.aspx" class="btn btn-primary btn-sm px-3 rounded-2 shadow-sm">Apply Now</a>
-                            </div>
-                        </div>
-                    </div>
+                        </ItemTemplate>
+                    </asp:DataList>
                 </div>
             </div>
         </section>
@@ -698,7 +574,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 </asp:Content>
 
