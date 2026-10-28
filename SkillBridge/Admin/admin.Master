@@ -55,49 +55,73 @@
                     <!-- Dashboard Content Area -->
                     <main class="dashboard-content">
 
+
                         <!-- Sticky Header -->
                         <header class="dashboard-header">
                             <div class="d-flex align-items-center gap-3">
-                                <button class="sidebar-toggle btn"><i class="fa-solid fa-bars"></i></button>
-                                <span class="navbar-brand-custom d-none d-md-inline-block fs-6 fw-bold">Admin Panel</span>
+                                <button class="sidebar-toggle btn" type="button">
+                                    <i class="fa-solid fa-bars"></i>
+                                </button>
+
+                                <span class="navbar-brand-custom d-none d-md-inline-block fs-6 fw-bold">Admin Panel
+                                </span>
                             </div>
 
                             <div class="header-actions">
-                                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+
+                                <!-- Theme Toggle -->
+                                <button id="theme-toggle" class="theme-toggle-btn"
+                                    type="button" aria-label="Toggle theme">
                                     <i class="fa-solid fa-moon"></i>
                                 </button>
-                                <div class="dropdown">
-                                    <button class="action-icon-btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fa-regular fa-bell"></i>
-                                        <span class="notification-badge"></span>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-custom p-0" style="width: 300px;">
-                                        <div class="p-3 border-bottom bg-light">
-                                            <span class="fw-bold text-secondary">System Notifications</span>
-                                        </div>
-                                        <div class="p-2 fs-8 text-center text-muted">
-                                            No active system alerts.
-                                        </div>
-                                    </div>
-                                </div>
 
+                                <!-- Admin Profile Dropdown -->
                                 <div class="dropdown">
-                                    <button class="profile-dropdown-btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <div style="width: 36px; height: 36px; background-color: #E2E8F0;" class="rounded-circle d-flex align-items-center justify-content-center">
+                                    <button class="profile-dropdown-btn dropdown-toggle no-caret"
+                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                        <div style="width: 36px; height: 36px; background-color: #E2E8F0;"
+                                            class="rounded-circle d-flex align-items-center justify-content-center">
                                             <i class="fa-solid fa-user-shield text-muted"></i>
                                         </div>
-                                        <span>Admin User</span>
+
+                                        <asp:Label ID="lblAdminName" runat="server"
+                                            Text="Admin User" />
+
                                     </button>
-                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom">
-                                        <li><a class="dropdown-item dropdown-item-custom" href="reports.aspx"><i class="fa-solid fa-file-invoice"></i>View Reports</a></li>
+
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom"
+                                        style="min-width: 280px; background-color: #151e32; border: 1px solid #283650; border-radius: 8px;">
+
+                                        <li style="padding: 8px 16px;">
+                                            <asp:Label ID="lblAdminEmail" runat="server"
+                                                Style="display: block; color: #f1f5f9; font-weight: 600; overflow-wrap: anywhere;" />
+                                        </li>
+
+                                        <li style="padding: 0 16px 8px;">
+                                            <asp:Label ID="lblAdminRole" runat="server"
+                                                Text="Admin"
+                                                Style="display: block; color: #a8b3c7; font-size: 14px;" />
+                                        </li>
+
                                         <li>
-                                            <hr class="dropdown-divider">
+                                            <hr class="dropdown-divider"
+                                                style="border-color: #334155;" />
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item dropdown-item-custom"
+                                                href="reports.aspx">
+                                                <i class="fa-solid fa-file-invoice"></i>
+                                                View Reports
+                                            </a>
                                         </li>
 
                                         <li>
                                             <a class="dropdown-item dropdown-item-custom text-danger"
                                                 href="../logout.aspx">
-                                                <i class="fa-solid fa-right-from-bracket"></i>Log Out
+                                                <i class="fa-solid fa-right-from-bracket"></i>
+                                                Log Out
                                             </a>
                                         </li>
 
